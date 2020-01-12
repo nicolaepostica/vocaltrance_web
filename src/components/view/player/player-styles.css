@@ -1,0 +1,10 @@
+.qw-radio-name.radiomarquee.marquee .js-marquee-wrapper {
+    width: 100000px;
+    margin-left: 180px;
+    animation: 24.0667s linear 0s 1 normal none running marqueeAnimation-394451;
+}
+
+.qw-radio-name.radiomarquee.marquee .js-marquee-wrapper .js-marquee{
+    margin-right: 200px;
+    float: left;
+}

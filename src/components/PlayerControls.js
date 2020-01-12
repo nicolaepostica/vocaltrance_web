@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Sound from 'react-sound';
 
 function control(text, clickHandler) {
@@ -15,9 +15,7 @@ function control(text, clickHandler) {
   );
 }
 
-const numberFormat = new Intl.NumberFormat([], { minimumFractionDigits: 2 });
-
-export default class PlayerControls extends React.Component {
+export default class PlayerControls extends Component {
   render() {
     return <div>{this.renderControls()}</div>;
   }
@@ -41,16 +39,6 @@ export default class PlayerControls extends React.Component {
           {controls.pause && control('Pause', this.props.onPause)}
           {controls.resume && control('Resume', this.props.onResume)}
         </ul>
-        <div>
-          Playback Rate:
-          <button onClick={this.props.onPlaybackRateDown}>-</button>
-          {' '}
-          {numberFormat.format(this.props.playbackRate)}
-          {' '}
-          <button onClick={this.props.onPlaybackRateUp}>+</button>
-        </div>
-        Loop?:
-        <input type="checkbox" checked={this.props.loop} onChange={this.props.onToggleLoop} />
       </div>
     );
   }

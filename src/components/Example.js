@@ -11,10 +11,8 @@ export default class Example extends React.Component {
     this.state = {
       controlled: true,
       currentSong: songs[0],
-      position: 0,
       volume: 100,
       playbackRate: 1,
-      loop: false,
       playStatus: Sound.status.PLAYING
     };
   }
@@ -33,15 +31,9 @@ export default class Example extends React.Component {
   }
 
   handleSongSelected = (song) => {
-    this.setState({ currentSong: song, position: 0 });
-  }
+    this.setState({ currentSong: song, });
+  };
 
-  handleControlledComponentChange = (ev) => {
-    this.setState({
-      controlled: ev.target.checked,
-      position: 0
-    });
-  }
 
   renderCurrentSong() {
     return (
@@ -52,7 +44,7 @@ export default class Example extends React.Component {
   }
 
   render() {
-    const { volume, playbackRate, loop } = this.state;
+    const { volume, playbackRate } = this.state;
 
     return (
       <div>
@@ -61,23 +53,18 @@ export default class Example extends React.Component {
           selectedSong={this.state.currentSong}
           onSongSelected={this.handleSongSelected}
         />
-        <label><input type="checkbox" checked={this.state.controlled} onChange={this.handleControlledComponentChange}/> Controlled Component</label>
         {this.state.currentSong && this.renderCurrentSong()}
         <PlayerControls
           playStatus={this.state.playStatus}
-          loop={loop}
           onPlay={() => this.setState({ playStatus: Sound.status.PLAYING })}
           onPause={() => this.setState({ playStatus: Sound.status.PAUSED })}
           onResume={() => this.setState({ playStatus: Sound.status.PLAYING })}
-          onStop={() => this.setState({ playStatus: Sound.status.STOPPED, position: 0 })}
-          onSeek={position => this.setState({ position })}
+          onStop={() => this.setState({ playStatus: Sound.status.STOPPED})}
           onVolumeUp={() => this.setState({ volume: volume >= 100 ? volume : volume + 10 })}
           onVolumeDown={() => this.setState({ volume: volume <= 0 ? volume : volume - 10 })}
           onPlaybackRateUp={() => this.setState({ playbackRate: playbackRate >= 4 ? playbackRate : playbackRate + 0.5 })}
           onPlaybackRateDown={() => this.setState({ playbackRate: playbackRate <= 0.5 ? playbackRate : playbackRate - 0.5 })}
-          onToggleLoop={e => this.setState({ loop: e.target.checked })}
           duration={this.state.currentSong ? this.state.currentSong.duration : 0}
-          position={this.state.position}
           playbackRate={playbackRate}
         />
         {this.state.currentSong && (
@@ -85,13 +72,10 @@ export default class Example extends React.Component {
             <Sound
               url={this.state.currentSong.url}
               playStatus={this.state.playStatus}
-              position={this.state.position}
               volume={volume}
               playbackRate={playbackRate}
-              loop={loop}
-              onLoading={({ bytesLoaded, bytesTotal }) => console.log(`${bytesLoaded / bytesTotal * 100}% loaded`)}
+              onLoading={({ bytesLoaded, bytesTotal }) =>  {}}
               onLoad={() => console.log('Loaded')}
-              onPlaying={({ position }) => this.setState({ position })}
               onPause={() => console.log('Paused')}
               onResume={() => console.log('Resumed')}
               onStop={() => console.log('Stopped')}
@@ -101,13 +85,10 @@ export default class Example extends React.Component {
             <Sound
               url={this.state.currentSong.url}
               playStatus={this.state.playStatus}
-              playFromPosition={this.state.position}
               volume={volume}
               playbackRate={playbackRate}
-              loop={loop}
               onLoading={({ bytesLoaded, bytesTotal }) => console.log(`${bytesLoaded / bytesTotal * 100}% loaded`)}
               onLoad={() => console.log('Loaded')}
-              onPlaying={({ position }) => console.log('Position', position)}
               onPause={() => console.log('Paused')}
               onResume={() => console.log('Resumed')}
               onStop={() => console.log('Stopped')}
