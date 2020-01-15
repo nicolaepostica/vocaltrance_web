@@ -2,7 +2,23 @@ import React from 'react';
 import './navbar-styles.css';
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 
-const NavBar = ({LastTenAction, lastTen, clipDialog, ClipDialogAction}) => {
+const displayLastTen = (lastTenStatus) => {
+  if (lastTenStatus) {
+    return {display: "block"}
+  } else {
+    return {display: "none"}
+  }
+};
+
+const displayClipDialog = (clipDialog) => {
+  if (clipDialog) {
+    return {display: "block"}
+  } else {
+    return {display: "none"}
+  }
+};
+
+const NavBar = ({lastTenAction, lastTenStatus, clipDialog, clipDialogAction, lastTenData}) => {
   return <div className="qw-prenav  qw-darkbg-dark hide-on-med-and-down  white-text" id="qwPrenav">
     <div className="">
       <div className="row">
@@ -37,56 +53,34 @@ const NavBar = ({LastTenAction, lastTen, clipDialog, ClipDialogAction}) => {
           <div className="last-ten-tracks">
             <div className="row">
               <div className="col s10">
-                <a className="dropdown-button btn accentcolor" href="#" onClick={() => LastTenAction("show")}
+                <a className="dropdown-button btn accentcolor" onClick={() => lastTenAction()}
                    data-activates="dropdown1">Last 10 Tracks</a>
                 <ul id="dropdown1" className="dropdown-content"
-                    style={{display: lastTen}}>
-                  <li>
-                    <CopyToClipboard text="Alex Leger ft. Ange - Love Me Deep Inside (Ilya Soloviev Progressive Mix)"
-                                     onCopy={() => LastTenAction("hide")}>
-                      <span className="clipboardClass data-clipboard-text=">Alex Leger ft. Ange - Love Me Deep Inside (Ilya Soloviev Progressive Mix)</span>
-                    </CopyToClipboard>
-                  </li>
-                  <li>
-                    <span className="clipboardClass data-clipboard-text=" onClick={() => LastTenAction("hide")}
-                          data-clipboard-text="Motif Ft. Hannah Magenta - Never Let Go (Walsh &amp; McAuley Remix)">Motif Ft. Hannah Magenta - Never Let Go (Walsh &amp; McAuley Remix)</span>
-                  </li>
-                  {/*<li><span className="clipboardClass data-clipboard-text=" onClick="clipboardNotification()"*/}
-                  {/*          data-clipboard-text="Gregory Esayan, Natalia Pevcova - Into the Night Feat. Natalia Pevcova (Deepshader &amp; Nazca Remix)">Gregory Esayan, Natalia Pevcova - Into the Night Feat. Natalia Pevcova (Deepshader &amp; Nazca Remix)</span>*/}
-                  {/*</li>*/}
-                  <li>
-                    <span className="clipboardClass data-clipboard-text=" onClick={() => LastTenAction("hide")}
-                          data-clipboard-text="Sensetive5 - Right Back (Chron!c Remix)">Sensetive5 - Right Back (Chron!c Remix)</span>
-                  </li>
-                  <li>
-                    <span className="clipboardClass data-clipboard-text=" onClick={() => LastTenAction("hide")}
-                          data-clipboard-text="Rake feat Natalie Griffiths - Expectation (Mark Pledger Tough Remix)">Rake feat Natalie Griffiths - Expectation (Mark Pledger Tough Remix)</span>
-                  </li>
-                  <li>
-                    <span className="clipboardClass data-clipboard-text=" onClick={() => LastTenAction("hide")}
-                          data-clipboard-text="Digital Affliction - Ethereal Echoes (Original Mix)">Digital Affliction - Ethereal Echoes (Original Mix)</span>
-                  </li>
-                  <li>
-                    <span className="clipboardClass data-clipboard-text=" onClick={() => LastTenAction("hide")}
-                          data-clipboard-text="Flashtech - On A Sunny Day (Original Mix)">Flashtech - On A Sunny Day (Original Mix)</span>
-                  </li>
-                  <li>
-                    <span className="clipboardClass data-clipboard-text=" onClick={() => LastTenAction("hide")}
-                          data-clipboard-text="Envio - Time To Say Goodbye (Original Mix Edit)">Envio - Time To Say Goodbye (Original Mix Edit)</span>
-                  </li>
-                  <li>
-                    <span className="clipboardClass data-clipboard-text=" onClick={() => LastTenAction("hide")}
-                          data-clipboard-text="Musty - Eon (Original Mix)">Musty - Eon (Original Mix)</span>
-                  </li>
-                  <li>
-                    <span className="clipboardClass data-clipboard-text=" onClick={() => LastTenAction("hide")}
-                          data-clipboard-text="John Vanger - Euphoria (Illitheas Remix)">John Vanger - Euphoria (Illitheas Remix)</span>
-                  </li>
+                    style={displayLastTen(lastTenStatus)}>
+                  {
+                    lastTenData.map((song, index) => {
+                      return (
+                        <li key={index}>
+                          <CopyToClipboard
+                            text={song}
+                            onCopy={
+                              () => {
+                                lastTenAction();
+                                clipDialogAction();
+                              }
+                            }>
+                            <span className="clipboardClass data-clipboard-text=">{song}</span>
+                          </CopyToClipboard>
+                        </li>
+                      )
+                    })
+                  }
                 </ul>
               </div>
             </div>
+
             <div className="mydialog">
-              <div className="dialog" id="clipDialog" style={{display: clipDialog}}>
+              <div className="dialog" id="clipDialog" style={displayClipDialog(clipDialog)}>
                 Track Copied to clipboard!
               </div>
             </div>

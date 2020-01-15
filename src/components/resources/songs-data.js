@@ -1,5 +1,15 @@
 export default [
   {
+    url: 'http://176.9.36.203:8000/vocaltrance_128',
+    title: 'vocal trance 128',
+    duration: 0
+  },
+  {
+    url: 'http://176.9.36.203:8000/vocaltrance_320',
+    title: 'vocal trance 320',
+    duration: 0
+  },
+  {
     url: 'http://176.9.36.203:8000/vocaltrance_256',
     title: 'vocal trance 256',
     duration: 0

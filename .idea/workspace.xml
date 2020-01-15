@@ -1,173 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d7b8582-60bf-4278-b945-5100ba4463fb" name="Default Changelist" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/.github/ISSUE_TEMPLATE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/css/materialdesignicons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/css/materialdesignicons.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/css/materialdesignicons.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/css/materialdesignicons.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/fonts/materialdesignicons-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/fonts/materialdesignicons-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/fonts/materialdesignicons-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/fonts/materialdesignicons-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/license.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/preview.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/scss/_animated.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/scss/_core.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/scss/_extras.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/scss/_functions.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/scss/_icons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/scss/_path.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/scss/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/scss/materialdesignicons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/favicon2.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/font/googlefonts.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/font/material-design-icons/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/font/material-design-icons/Material-Design-Icons.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/font/material-design-icons/Material-Design-Icons.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/font/material-design-icons/Material-Design-Icons.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/font/material-design-icons/Material-Design-Icons.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/font/material-design-icons/Material-Design-Icons.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/font/roboto/Roboto-Bold.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/font/roboto/Roboto-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/font/roboto/Roboto-Bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/font/roboto/Roboto-Bold.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/font/roboto/Roboto-Light.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/font/roboto/Roboto-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/font/roboto/Roboto-Light.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/font/roboto/Roboto-Light.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/font/roboto/Roboto-Medium.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/font/roboto/Roboto-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/font/roboto/Roboto-Medium.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/font/roboto/Roboto-Medium.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/font/roboto/Roboto-Regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/font/roboto/Roboto-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/font/roboto/Roboto-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/font/roboto/Roboto-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/font/roboto/Roboto-Thin.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/font/roboto/Roboto-Thin.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/font/roboto/Roboto-Thin.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/font/roboto/Roboto-Thin.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/img/app_android.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/img/app_blackberry.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/img/app_iphone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/img/app_itunes.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/img/app_mediaplayer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/img/app_winamp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/img/app_winphone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/img/volume-fader.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/img/volume.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/src/360player-custom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/src/ON-AIR-LOGO-NEGATIVE-m2-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/src/ajax_functions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/src/clipboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/src/css.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/src/css_002.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/src/fonts/qticons.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/src/fonts/qticons.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/src/fonts/qticons.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/src/fonts/qticons.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/src/jquery-migrate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/src/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/src/jquerycookie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/src/main-style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/src/openapi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/src/qantum-soundmanager2-library.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/src/qantumthemes-soundmanager2-styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/src/qt-main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/src/sdk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/src/sdk_002.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/src/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/src/theme-libraries.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/src/wp-embed.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/src/wp-emoji-release.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/demo/main/src/xd_arbiter.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index-backup.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/favicon2.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/img/app_android.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/img/app_blackberry.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/img/app_iphone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/img/app_itunes.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/img/app_mediaplayer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/img/app_winamp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/img/app_winphone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/img/volume-fader.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/img/volume.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/src/font/googlefonts.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/src/font/material-design-icons/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/src/font/material-design-icons/Material-Design-Icons.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/src/font/material-design-icons/Material-Design-Icons.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/src/font/material-design-icons/Material-Design-Icons.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/src/font/material-design-icons/Material-Design-Icons.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/src/font/material-design-icons/Material-Design-Icons.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/src/font/roboto/Roboto-Bold.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/src/font/roboto/Roboto-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/src/font/roboto/Roboto-Bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/src/font/roboto/Roboto-Bold.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/src/font/roboto/Roboto-Light.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/src/font/roboto/Roboto-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/src/font/roboto/Roboto-Light.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/src/font/roboto/Roboto-Light.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/src/font/roboto/Roboto-Medium.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/src/font/roboto/Roboto-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/src/font/roboto/Roboto-Medium.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/src/font/roboto/Roboto-Medium.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/src/font/roboto/Roboto-Regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/src/font/roboto/Roboto-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/src/font/roboto/Roboto-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/src/font/roboto/Roboto-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/src/font/roboto/Roboto-Thin.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/src/font/roboto/Roboto-Thin.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/src/font/roboto/Roboto-Thin.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/src/font/roboto/Roboto-Thin.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/src/fonts/qticons.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/src/fonts/qticons.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/src/fonts/qticons.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/src/fonts/qticons.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/src/main-style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/main/src/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/resources/ON-AIR-LOGO-NEGATIVE-m2-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/view/navbar/NavBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/view/navbar/navbar-styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/view/player/QT-Player.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/view/player/player-styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/view/root/RootContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/view/root/root-styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/MaterialDesign-Webfont-master/.github/ISSUE_TEMPLATE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/MaterialDesign-Webfont-master/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/MaterialDesign-Webfont-master/css/materialdesignicons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/MaterialDesign-Webfont-master/css/materialdesignicons.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/MaterialDesign-Webfont-master/css/materialdesignicons.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/MaterialDesign-Webfont-master/css/materialdesignicons.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/MaterialDesign-Webfont-master/fonts/materialdesignicons-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/MaterialDesign-Webfont-master/fonts/materialdesignicons-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/MaterialDesign-Webfont-master/fonts/materialdesignicons-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/MaterialDesign-Webfont-master/fonts/materialdesignicons-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/MaterialDesign-Webfont-master/license.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/MaterialDesign-Webfont-master/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/MaterialDesign-Webfont-master/preview.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/MaterialDesign-Webfont-master/scss/_animated.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/MaterialDesign-Webfont-master/scss/_core.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/MaterialDesign-Webfont-master/scss/_extras.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/MaterialDesign-Webfont-master/scss/_functions.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/MaterialDesign-Webfont-master/scss/_icons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/MaterialDesign-Webfont-master/scss/_path.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/MaterialDesign-Webfont-master/scss/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/MaterialDesign-Webfont-master/scss/materialdesignicons.scss" afterDir="false" />
+    <list default="true" id="1d7b8582-60bf-4278-b945-5100ba4463fb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/dev/demo/ice_cast_demo/Icecast.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dev/demo/ice_cast_demo/icecast.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dev/demo/ice_cast_demo/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dev/demo/ice_cast_demo/tunein.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/resources/last-ten-data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/resources/md-volume-high.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/resources/md-volume-high.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/resources/md-volume-low.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/resources/md-volume-mute.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Example.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Example.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PlayerControls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PlayerControls.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/songs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/songs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/css/materialdesignicons.css" beforeDir="false" afterPath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/css/materialdesignicons.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/css/materialdesignicons.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/css/materialdesignicons.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/css/materialdesignicons.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/css/materialdesignicons.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/preview.html" beforeDir="false" afterPath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/preview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/scss/_animated.scss" beforeDir="false" afterPath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/scss/_animated.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/scss/_extras.scss" beforeDir="false" afterPath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/scss/_extras.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/scss/_functions.scss" beforeDir="false" afterPath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/scss/_functions.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/scss/_icons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/scss/_icons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/scss/_path.scss" beforeDir="false" afterPath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/scss/_path.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/scss/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/dev/demo/lib/MaterialDesign-Webfont-master/scss/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index-backup.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" afterPath="$PROJECT_DIR$/dev/demo/ice_cast_demo/logo192.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/main/src/main-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/main/src/main-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Example.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PlayerControls.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SongSelector.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/songs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/resources/songs-data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/stations-data.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/view/navbar/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/view/navbar/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/view/navbar/navbar-styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/view/navbar/navbar-styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/view/player/QT-Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/view/player/QT-Player.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/view/player/player-styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/view/player/player-styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/view/root/RootContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/view/root/RootContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -195,7 +64,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/main" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../react_native/projects/FreelanceScanner" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -210,19 +79,19 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/main" />
-      <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/src/components/resources" />
-      <recent name="$PROJECT_DIR$/public/main/src" />
-      <recent name="$PROJECT_DIR$/public/main/img" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/dev/demo/ice_cast_demo" />
+      <recent name="$PROJECT_DIR$/src/components/resources" />
       <recent name="$PROJECT_DIR$/src/components/view/player" />
       <recent name="$PROJECT_DIR$/src/components/view/navbar" />
       <recent name="$PROJECT_DIR$/src/components/view/root" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/dev" />
+      <recent name="$PROJECT_DIR$/src/components/resources" />
       <recent name="$PROJECT_DIR$/public/main" />
       <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/public/main/src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -292,7 +161,7 @@
       <workItem from="1578478988537" duration="21444000" />
       <workItem from="1578576936690" duration="17514000" />
       <workItem from="1578824647460" duration="1573000" />
-      <workItem from="1578830966499" duration="3638000" />
+      <workItem from="1578830966499" duration="40957000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1578238120735</created>
@@ -301,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578238120735</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="npm i react-copy-to-clipboard">
+      <created>1578841043690</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1578841043690</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,8 +197,11 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="npm i react-copy-to-clipboard" />
+    <option name="LAST_COMMIT_MESSAGE" value="npm i react-copy-to-clipboard" />
   </component>
 </project>
