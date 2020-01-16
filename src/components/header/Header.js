@@ -2,31 +2,31 @@ import React from 'react';
 import NavBar from "../navbar/NavBar";
 import QTPlayer from "../player/QT-Player";
 import songs from "../resources/songs-data";
+import {Link} from "react-router-dom";
 
 const Header = (props) => {
-  const {lastTenStatus, lastTenAction, clipDialog, clipDialogAction, lastTenData, playAction, playListShowAction,
-    playListShowStatus, volume, volumeAction, selectedSong, onSongSelected, currentTrack, playStatus} = props;
+  const {
+    lastTenStatus, lastTenAction, clipDialog, clipDialogAction, lastTenData, playAction, playListShowAction,
+    playListShowStatus, volume, volumeAction, selectedSong, onSongSelected, currentTrack, playStatus
+  } = props;
 
-  return(
+  return (
     <div className="qw-headercontainer maincolor dark qw-parallax-background-css z-depth-1" data-speed="2">
-
       <NavBar lastTenStatus={lastTenStatus}
               lastTenAction={lastTenAction}
               clipDialog={clipDialog}
               clipDialogAction={clipDialogAction}
               lastTenData={lastTenData}
       />
-
       <div className="qw-header-logo-big">
-        <a href="http://vocaltrance.fm/">
+        <Link to="/">
           <img src={require('../resources/ON-AIR-LOGO-NEGATIVE-m2-1.png')} className="img-responsive"
                alt="Home"/>
-        </a>
+        </Link>
       </div>
       <div className="onair-mobile-cont">
         <p id="onairMobile" data-clipboard-text={currentTrack}>{currentTrack}</p>
       </div>
-
       <QTPlayer playAction={playAction}
                 playListShowAction={playListShowAction}
                 playListShowStatus={playListShowStatus}
@@ -38,7 +38,6 @@ const Header = (props) => {
                 songs={songs}
                 playStatus={playStatus}
       />
-
     </div>
   );
 };
