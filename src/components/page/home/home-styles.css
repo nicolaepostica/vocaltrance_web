@@ -1,0 +1,5 @@
+.listener.no-hover:hover {
+    cursor: default;
+    color: #ff5252 !important;
+    text-decoration: none;
+}

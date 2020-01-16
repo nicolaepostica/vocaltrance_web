@@ -119,9 +119,8 @@ const QTPlayer = ({
           </div>
         </div>
       </div>
-
     </nav>
   </div>
-}
+};
 
 export default QTPlayer;

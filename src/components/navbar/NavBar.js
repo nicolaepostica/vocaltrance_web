@@ -1,6 +1,7 @@
 import React from 'react';
 import './navbar-styles.css';
 import {CopyToClipboard} from 'react-copy-to-clipboard';
+import {Link} from "react-router-dom";
 
 const displayLastTen = (lastTenStatus) => {
   if (lastTenStatus) {
@@ -26,26 +27,26 @@ const NavBar = ({lastTenAction, lastTenStatus, clipDialog, clipDialogAction, las
           <ul id="secondarymenu" className="qw-smallmenu qw-nooverflow">
             <li id="menu-item-3142"
                 className="mdi-action-home menu-item menu-item-type-post_type menu-item-object-page menu-item-3142">
-              <a href="http://vocaltrance.fm/blog/">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li id="menu-item-3287" className="menu-item menu-item-type-custom menu-item-object-custom menu-item-3287">
-              <a href="http://www2.vocaltrance.fm/">NEW RADIO</a>
+              <a href="http://www.vocaltrance.fm/">OLD RADIO</a>
             </li>
             <li id="menu-item-2798"
                 className="qticon-blogger menu-item menu-item-type-post_type menu-item-object-page menu-item-2798">
-              <a href="http://vocaltrance.fm/show-slider/">VK / FB</a>
+              <Link to="/blog">VK / FB</Link>
             </li>
             <li id="menu-item-2984"
                 className="mdi-action-account-box menu-item menu-item-type-post_type menu-item-object-page menu-item-2984">
-              <a href="http://vocaltrance.fm/team-members-page/">Team</a>
+              <Link to="/team">Team</Link>
             </li>
             <li id="menu-item-2986"
                 className="qticon-play menu-item menu-item-type-post_type menu-item-object-page menu-item-2986">
-              <a href="http://vocaltrance.fm/videolove-filterable-videos/">Videos</a>
+              <Link to="/videos">Videos</Link>
             </li>
             <li id="menu-item-2796"
                 className="mdi-action-perm-phone-msg menu-item menu-item-type-post_type menu-item-object-page menu-item-2796">
-              <a href="http://vocaltrance.fm/contacts/">Contacts</a>
+              <Link to="/contacts">Contacts</Link>
             </li>
           </ul>
         </div>
@@ -53,7 +54,7 @@ const NavBar = ({lastTenAction, lastTenStatus, clipDialog, clipDialogAction, las
           <div className="last-ten-tracks">
             <div className="row">
               <div className="col s10">
-                <a className="dropdown-button btn accentcolor" onClick={() => lastTenAction()}
+                <a className="dropdown-button btn accentcolor" onClick={() => lastTenAction(!lastTenStatus)}
                    data-activates="dropdown1">Last 10 Tracks</a>
                 <ul id="dropdown1" className="dropdown-content"
                     style={displayLastTen(lastTenStatus)}>
@@ -62,14 +63,14 @@ const NavBar = ({lastTenAction, lastTenStatus, clipDialog, clipDialogAction, las
                       return (
                         <li key={index}>
                           <CopyToClipboard
-                            text={song}
+                            text={song.track_title}
                             onCopy={
                               () => {
                                 lastTenAction();
                                 clipDialogAction();
                               }
                             }>
-                            <span className="clipboardClass data-clipboard-text=">{song}</span>
+                            <span className="clipboardClass data-clipboard-text=">{song.track_title}</span>
                           </CopyToClipboard>
                         </li>
                       )
