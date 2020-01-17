@@ -12,9 +12,7 @@ import data_template from "../resources/data-template"
 import axios from "axios";
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 
-
-
-const BASE_URL = "https://vocaltrance.fm:8888";
+const BASE_URL = "http://176.9.36.203:8888/api/v1/";
 
 const key_to_index = {radio: 0, vocaltrance: 1, deep: 2, positive: 3, uplifting: 4, chillout: 5};
 
@@ -44,7 +42,6 @@ export default class RootContainer extends Component {
   get_channel_info = () => {
     axios.get(`${BASE_URL}get_current_tracks`)
       .then((response) => {
-        console.log(response.data);
         this.setState({data: response.data});
         this.update_current_track(response.data[key_to_index[this.state.currentSong.key]]);
       })
