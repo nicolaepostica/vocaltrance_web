@@ -45,7 +45,7 @@ export default class RootContainer extends Component {
         this.setState({data: response.data});
         this.update_current_track(response.data[key_to_index[this.state.currentSong.key]]);
       })
-    .catch((error) => console.log("Can’t access " + BASE_URL + " response. Blocked by browser"));
+      .catch((error) => console.log("Can’t access " + BASE_URL + " response. Blocked by browser"));
   };
 
   get_last_ten = () => {
@@ -56,11 +56,27 @@ export default class RootContainer extends Component {
       .catch((error) => console.log("Can’t access " + BASE_URL + " response. Blocked by browser"));
   };
 
+  onScroll = (stickToBot) => {
+    let qtBody = document.getElementById("theBody");
+    let scrollVal = window.scrollY;
+    if (scrollVal > stickToBot) {
+      if (!qtBody.classList.contains("qw-stickynav")) {
+        qtBody.classList.add("qw-stickynav");
+      }
+    } else {
+      if (qtBody.classList.contains("qw-stickynav")) {
+        qtBody.classList.remove("qw-stickynav");
+      }
+    }
+  };
+
   componentDidMount() {
     this.get_channel_info();
     this.get_last_ten();
     setInterval(this.get_channel_info, 10000);
     setInterval(this.get_last_ten, 10000);
+    let stickToBot = document.getElementById("qwMainDivNavbar").offsetTop + 120;
+    window.addEventListener("scroll", ()=>this.onScroll(stickToBot));
   }
 
   lastTenAction = (status) => {

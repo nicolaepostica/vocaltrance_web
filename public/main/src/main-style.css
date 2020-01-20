@@ -7647,7 +7647,7 @@ button.btn-floating {
     -ms-transform: translateZ(0);
     -o-transform: translateZ(0);
     transform: translateZ(0);
-    -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%)
+    -webkit-mask-image: -webkit-radial-gradient(circle, white, black)
 }
 
 .waves-input-wrapper {
@@ -9641,7 +9641,7 @@ select {
 .picker__day--today {
     position: relative;
     color: #595959;
-    letter-spacing: -.3;
+    letter-spacing: -0.3px;
     padding: .75rem 0;
     font-weight: 400;
     border: 1px solid transparent
@@ -13383,7 +13383,10 @@ a.accentcolor, a.accentcolor:hover {
         top: 0;
     }
 
-    body.qw-stickynav nav, body.qw-stickynav nav .nav-wrapper i, body.qw-stickynav nav a.button-collapse, body.qw-stickynav nav a.button-collapse i {
+    body.qw-stickynav nav,
+    body.qw-stickynav nav .nav-wrapper i,
+    body.qw-stickynav nav a.button-collapse,
+    body.qw-stickynav nav a.button-collapse i {
         height: 60px;
         line-height: 60px;
     }
@@ -13400,7 +13403,10 @@ a.accentcolor, a.accentcolor:hover {
         top: 32px;
     }
 
-    body.qw-stickynav.admin-bar nav, body.qw-stickynav.admin-bar nav .nav-wrapper i, body.qw-stickynav.admin-bar nav a.button-collapse, body.qw-stickynav.admin-bar nav a.button-collapse i {
+    body.qw-stickynav.admin-bar nav,
+    body.qw-stickynav.admin-bar nav .nav-wrapper i,
+    body.qw-stickynav.admin-bar nav a.button-collapse,
+    body.qw-stickynav.admin-bar nav a.button-collapse i {
         height: 60px;
         line-height: 60px;
     }
@@ -13423,7 +13429,9 @@ a.accentcolor, a.accentcolor:hover {
         padding-top: 30px;
     }
 
-    nav#qwMainNavbar, body.qw-stickynav nav#qwMainNavbar .nav-wrapper.z-depth-1, body.qw-stickynav nav#qwMainNavbar .nav-wrapper {
+    nav#qwMainNavbar,
+    body.qw-stickynav nav#qwMainNavbar .nav-wrapper.z-depth-1,
+    body.qw-stickynav nav#qwMainNavbar .nav-wrapper {
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         box-shadow: none;
