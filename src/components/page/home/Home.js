@@ -1,9 +1,10 @@
 import React from 'react';
 import channel_info_static from "../../resources/channel-info-static";
 import "./home-styles.css"
+import Spinner from "../../spinner/Spinner";
 
 const Home = (props) => {
-  const {data} = props;
+  const {data, loading} = props;
   return (
     <section id="page-3268"
              className="qw-mainsection qw-page-section qw-top30 post-3268 page type-page status-publish hentry">
@@ -62,7 +63,6 @@ const Home = (props) => {
                     </div>
                     <div/>
                   </div>
-
                 </div>
               </div>
               <div className="canc"/>
@@ -75,7 +75,7 @@ const Home = (props) => {
                 <h4 className="qw-widget-title">{channel_info_static[item.key].block_name}</h4>
                 <div className="paper z-depth-1">
                   <div className="content">
-                    {item.channel_info.map((channel, c_index) => (
+                    {loading ? <Spinner/> : item.channel_info.map((channel, c_index) => (
                       <div key={`${item.key}-${channel.bitrate}`}>
                         <strong>{`${channel_info_static[item.key].channel_name} ${channel.bitrate}`}</strong><br/>
                         <a

@@ -12,7 +12,7 @@ import data_template from "../resources/data-template"
 import axios from "axios";
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 
-const BASE_URL = "http://176.9.36.203:8888/api/v1/";
+const BASE_URL = "http://vocaltrance.fm:8888/api/v1/";
 
 const key_to_index = {radio: 0, vocaltrance: 1, deep: 2, positive: 3, uplifting: 4, chillout: 5};
 
@@ -32,6 +32,7 @@ export default class RootContainer extends Component {
       playStatus: Sound.status.PLAYING,
       currentTrack: '',
       data: data_template,
+      loading_channel_data: true,
     };
   }
 
@@ -42,7 +43,7 @@ export default class RootContainer extends Component {
   get_channel_info = () => {
     axios.get(`${BASE_URL}get_current_tracks`)
       .then((response) => {
-        this.setState({data: response.data});
+        this.setState({data: response.data, loading_channel_data: false});
         this.update_current_track(response.data[key_to_index[this.state.currentSong.key]]);
       })
       .catch((error) => console.log("Can’t access " + BASE_URL + " response. Blocked by browser"));
@@ -142,7 +143,7 @@ export default class RootContainer extends Component {
         <Route path="/team" component={Team}/>
         <Route path="/videos" component={Video}/>
         <Route path="/contacts" component={Contacts}/>
-        <Route path="/" component={() => <Home data={this.state.data}/>} exact={true}/>
+        <Route path="/" component={() => <Home data={this.state.data} loading={this.state.loading_channel_data}/>} exact={true}/>
 
         {this.state.currentSong && (
           this.state.controlled ? (
@@ -151,12 +152,6 @@ export default class RootContainer extends Component {
               playStatus={this.state.playStatus}
               volume={this.state.volume}
               playbackRate={this.state.playbackRate}
-              // onLoading={({bytesLoaded, bytesTotal}) => {
-              // }}
-              // onLoad={() => console.log('Loaded')}
-              // onPause={() => console.log('Paused')}
-              // onResume={() => console.log('Resumed')}
-              // onStop={() => console.log('Stopped')}
               onFinishedPlaying={() => this.setState({playStatus: Sound.status.STOPPED})}
             />
           ) : (
@@ -165,13 +160,6 @@ export default class RootContainer extends Component {
               playStatus={this.state.playStatus}
               volume={this.state.volume}
               playbackRate={this.state.playbackRate}
-              // onLoading={({bytesLoaded, bytesTotal}) => {
-              //   console.log(`${bytesLoaded / bytesTotal * 100}% loaded`)
-              // }}
-              // onLoad={() => console.log('Loaded')}
-              // onPause={() => console.log('Paused')}
-              // onResume={() => console.log('Resumed')}
-              // onStop={() => console.log('Stopped')}
               onFinishedPlaying={() => this.setState({playStatus: Sound.status.STOPPED})}
             />
           )
