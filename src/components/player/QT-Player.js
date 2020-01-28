@@ -31,8 +31,6 @@ const playListItemIcon = (currentSong, song, playStatus) => {
   }
 };
 
-const volumeReference = React.createRef();
-
 const QTPlayer = ({
                     playAction, playListShowAction, playListShowStatus, volumeAction, playStatus,
                     volume, currentTrack, songs, onSongSelected, selectedSong

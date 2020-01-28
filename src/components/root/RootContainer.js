@@ -27,7 +27,7 @@ export default class RootContainer extends Component {
       controlled: true,
       currentSong: songs[0],
       position: 0,
-      volume: 100,
+      volume: 70,
       playbackRate: 1,
       playStatus: Sound.status.PLAYING,
       currentTrack: '',

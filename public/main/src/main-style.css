@@ -11523,8 +11523,8 @@ nav .nav-wrapper .brand-logo.textual {
 
 .qw-radiolist a {
     width: 100%;
-    height: 60px;
-    padding: 10px;
+    height: 50px;
+    padding: 5px 10px;
     color: #fff;
     text-align: left;
     line-height: 40px !important;
