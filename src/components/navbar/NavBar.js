@@ -25,37 +25,34 @@ const NavBar = ({lastTenAction, lastTenStatus, clipDialog, clipDialogAction, las
       <div className="row">
         <div className="col s8 qw-nooverflow  qw-small qw-caps">
           <ul id="secondarymenu" className="qw-smallmenu qw-nooverflow">
-            <li id="menu-item-3142"
-                className="mdi-action-home menu-item menu-item-type-post_type menu-item-object-page menu-item-3142">
+            <li id="menu-item-3000" className="mdi-action-home">
               <Link to="/">Home</Link>
             </li>
-            <li id="menu-item-3287" className="menu-item menu-item-type-custom menu-item-object-custom menu-item-3287">
-              <a href="http://www.vocaltrance.fm/">OLD RADIO</a>
-            </li>
-            <li id="menu-item-2798"
-                className="qticon-blogger menu-item menu-item-type-post_type menu-item-object-page menu-item-2798">
+            <li id="menu-item-3001" className="qticon-blogger">
               <Link to="/blog">VK / FB</Link>
             </li>
-            <li id="menu-item-2984"
-                className="mdi-action-account-box menu-item menu-item-type-post_type menu-item-object-page menu-item-2984">
+            <li id="menu-item-3001" className="mdi-action-account-box">
               <Link to="/team">Team</Link>
             </li>
-            <li id="menu-item-2986"
-                className="qticon-play menu-item menu-item-type-post_type menu-item-object-page menu-item-2986">
+            <li id="menu-item-3004" className="qticon-play">
               <Link to="/videos">Videos</Link>
             </li>
-            <li id="menu-item-2796"
-                className="mdi-action-perm-phone-msg menu-item menu-item-type-post_type menu-item-object-page menu-item-2796">
+            <li id="menu-item-3005" className="mdi-action-perm-phone-msg">
               <Link to="/contacts">Contacts</Link>
             </li>
+            {/*<li id="menu-item-3006">*/}
+            {/*  <img className="app-android-icon" src={require('../resources/app_android.png')} alt="Android"/>*/}
+            {/*  <a href="https://drive.google.com/file/d/12bLZLesh0y47kIPpfungRXr8w07i63Ps/view?usp=sharing"*/}
+            {/*     target="_blank" rel="noopener noreferrer">Android</a>*/}
+            {/*</li>*/}
           </ul>
         </div>
         <div className="col s4 qw-onair-widget">
           <div className="last-ten-tracks">
             <div className="row">
               <div className="col s10">
-                <a className="dropdown-button btn accentcolor" onClick={() => lastTenAction(!lastTenStatus)}
-                   data-activates="dropdown1">Last 10 Tracks</a>
+                <button className="dropdown-button btn accentcolor" onClick={() => lastTenAction(!lastTenStatus)}
+                   data-activates="dropdown1">Last 10 Tracks</button>
                 <ul id="dropdown1" className="dropdown-content"
                     style={displayLastTen(lastTenStatus)}>
                   {

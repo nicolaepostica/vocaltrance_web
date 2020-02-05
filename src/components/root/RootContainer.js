@@ -11,8 +11,9 @@ import songs from "../resources/songs-data";
 import data_template from "../resources/data-template"
 import axios from "axios";
 import {BrowserRouter as Router, Route} from 'react-router-dom'
+import Footer from "../footer/Footer";
 
-const BASE_URL = "http://vocaltrance.fm:8888/api/v1/";
+const BASE_URL = "https://vocaltrance.fm/api/v1/";
 
 const key_to_index = {radio: 0, vocaltrance: 1, deep: 2, positive: 3, uplifting: 4, chillout: 5};
 
@@ -34,6 +35,15 @@ export default class RootContainer extends Component {
       data: data_template,
       loading_channel_data: true,
     };
+  }
+
+  componentDidMount() {
+    this.get_channel_info();
+    this.get_last_ten();
+    setInterval(this.get_channel_info, 10000);
+    setInterval(this.get_last_ten, 10000);
+    let stickToBot = document.getElementById("qwMainDivNavbar").offsetTop + 120;
+    window.addEventListener("scroll", ()=>this.onScroll(stickToBot));
   }
 
   update_current_track = (channel) => {
@@ -70,15 +80,6 @@ export default class RootContainer extends Component {
       }
     }
   };
-
-  componentDidMount() {
-    this.get_channel_info();
-    this.get_last_ten();
-    setInterval(this.get_channel_info, 10000);
-    setInterval(this.get_last_ten, 10000);
-    let stickToBot = document.getElementById("qwMainDivNavbar").offsetTop + 120;
-    window.addEventListener("scroll", ()=>this.onScroll(stickToBot));
-  }
 
   lastTenAction = (status) => {
     this.setState({lastTenStatus: status});
@@ -122,49 +123,55 @@ export default class RootContainer extends Component {
   };
 
   render() {
-    return <>
-      <Router>
-        <Header lastTenStatus={this.state.lastTenStatus}
-                lastTenAction={this.lastTenAction}
-                clipDialog={this.state.clipDialog}
-                clipDialogAction={this.clipDialogAction}
-                lastTenData={this.state.lastTenData}
-                playAction={this.playAction}
-                playListShowAction={this.playListShowAction}
-                playListShowStatus={this.state.playListShowStatus}
+    return (
+      <>
+      <div id="qtMainContainer" className="qw-main-container">
+        <Router>
+          <Header lastTenStatus={this.state.lastTenStatus}
+                  lastTenAction={this.lastTenAction}
+                  clipDialog={this.state.clipDialog}
+                  clipDialogAction={this.clipDialogAction}
+                  lastTenData={this.state.lastTenData}
+                  playAction={this.playAction}
+                  playListShowAction={this.playListShowAction}
+                  playListShowStatus={this.state.playListShowStatus}
+                  volume={this.state.volume}
+                  volumeAction={this.volumeAction}
+                  selectedSong={this.state.currentSong}
+                  onSongSelected={this.handleSongSelected}
+                  currentTrack={this.state.currentTrack}
+                  playStatus={this.state.playStatus}/>
+
+          <Route path="/blog" component={Blog}/>
+          <Route path="/team" component={Team}/>
+          <Route path="/videos" component={Video}/>
+          <Route path="/contacts" component={Contacts}/>
+          <Route path="/" component={() => <Home data={this.state.data} loading={this.state.loading_channel_data}/>} exact={true}/>
+
+          {this.state.currentSong && (
+            this.state.controlled ? (
+              <Sound
+                url={this.state.currentSong.url}
+                playStatus={this.state.playStatus}
                 volume={this.state.volume}
-                volumeAction={this.volumeAction}
-                selectedSong={this.state.currentSong}
-                onSongSelected={this.handleSongSelected}
-                currentTrack={this.state.currentTrack}
-                playStatus={this.state.playStatus}/>
-
-        <Route path="/blog" component={Blog}/>
-        <Route path="/team" component={Team}/>
-        <Route path="/videos" component={Video}/>
-        <Route path="/contacts" component={Contacts}/>
-        <Route path="/" component={() => <Home data={this.state.data} loading={this.state.loading_channel_data}/>} exact={true}/>
-
-        {this.state.currentSong && (
-          this.state.controlled ? (
-            <Sound
-              url={this.state.currentSong.url}
-              playStatus={this.state.playStatus}
-              volume={this.state.volume}
-              playbackRate={this.state.playbackRate}
-              onFinishedPlaying={() => this.setState({playStatus: Sound.status.STOPPED})}
-            />
-          ) : (
-            <Sound
-              url={this.state.currentSong.url}
-              playStatus={this.state.playStatus}
-              volume={this.state.volume}
-              playbackRate={this.state.playbackRate}
-              onFinishedPlaying={() => this.setState({playStatus: Sound.status.STOPPED})}
-            />
-          )
-        )}
-      </Router>
+                playbackRate={this.state.playbackRate}
+                onFinishedPlaying={() => this.setState({playStatus: Sound.status.STOPPED})}
+              />
+            ) : (
+              <Sound
+                url={this.state.currentSong.url}
+                playStatus={this.state.playStatus}
+                volume={this.state.volume}
+                playbackRate={this.state.playbackRate}
+                onFinishedPlaying={() => this.setState({playStatus: Sound.status.STOPPED})}
+              />
+            )
+          )}
+        </Router>
+      </div>
+      <div className = "qw-pushpin-block" />
+      <Footer ref={this.myRef}/>
     </>
+    )
   }
 }

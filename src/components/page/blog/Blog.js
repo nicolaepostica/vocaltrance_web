@@ -1,6 +1,6 @@
 import React from "react";
 
-const Blog = (props) => {
+const Blog = () => {
   return (
     <section id="page-3268"
              className="qw-mainsection qw-page-section qw-top30 post-3268 page type-page status-publish hentry">

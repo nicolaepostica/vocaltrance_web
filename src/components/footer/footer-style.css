@@ -1,0 +1,19 @@
+.page-footer.maincolor.dark.qw-parallax-background-css.qw-insetshadow.qw-fancyborder {
+    background: rgba(0, 0, 0, 0) no-repeat scroll center center / cover;
+}
+
+footer .container .qw-padded .row .col.l4.s12.ch1 {
+    visibility: visible;
+    transform: translateX(-70px) scale(0.95);
+    opacity: 0;
+    -webkit-transform: translateX(-70px) scale(0.95);
+    opacity: 0;
+}
+
+footer .container .qw-padded .row .col.l4.s12.ch2 {
+    visibility: visible;
+    transform: translateX(70px) scale(0.95);
+    opacity: 0;
+    -webkit-transform: translateX(70px) scale(0.95);
+    opacity: 0;
+}
