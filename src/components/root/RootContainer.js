@@ -16,6 +16,13 @@ import Footer from "../footer/Footer";
 const BASE_URL = "https://vocaltrance.fm/api/v1/";
 
 const key_to_index = {radio: 0, vocaltrance: 1, deep: 2, positive: 3, uplifting: 4, chillout: 5};
+const key_to_url = {
+  radio: "get_last10_vocaltrance_track",
+  vocaltrance: "get_last10_vocaltrance_track",
+  deep: "get_last10_deep_track",
+  positive: "get_last10_positive_track",
+  uplifting: "get_last10_uplifting_track",
+  chillout: "get_last10_chillout_track"};
 
 export default class RootContainer extends Component {
   constructor(props) {
@@ -60,7 +67,7 @@ export default class RootContainer extends Component {
   };
 
   get_last_ten = () => {
-    axios.get(`${BASE_URL}get_last10_vocaltrance_track`)
+    axios.get(`${BASE_URL}${key_to_url[this.state.currentSong.key]}`)
       .then((response) => {
         this.setState({lastTenData: response.data})
       })
@@ -116,10 +123,11 @@ export default class RootContainer extends Component {
     this.setState({playListShowStatus: false});
   };
 
-  handleSongSelected = (song) => {
-    this.setState({currentSong: song,});
-    this.update_current_track(this.state.data[key_to_index[song.key]]);
-    this.playListShowAction();
+  handleSongSelected = async (song) => {
+    await this.setState({currentSong: song,});
+    await this.update_current_track(this.state.data[key_to_index[song.key]]);
+    await this.get_last_ten();
+    await this.playListShowAction();
   };
 
   render() {
