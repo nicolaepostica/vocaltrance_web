@@ -41,11 +41,12 @@ const QTPlayer = ({
         <div className=" qw-wrapper">
           <div className="container qw-block-100p ">
             <div className="nav-wrapper maincolor  z-depth-2">
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <a className="toogle accentcolor qw-playerbutton tooltipped waves-effect waves-light"
                  data-tooltip="Other channels"
                  onClick={() => playListShowAction()}>
                 <div className="title">Other Channels</div>
-                <i className="mdi-action-view-list"></i>
+                <i className="mdi-action-view-list" />
               </a>
 
               <div className="runing-string">
@@ -56,11 +57,11 @@ const QTPlayer = ({
                 <div className="qw-vp">
                   <div className="qw-vc qw-themusicplayer-dynamicplace">
                     <div className="qw-musicplayer" id="qwMusicPlayerContainer">
+                      {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                       <a className="accentcolor qw-playerbutton waves-effect waves-light tooltipped qwPlayerPlay"
                          id="qwPlayerPlay" data-position="left" data-tooltip="Play"
-                         onClick={playAction}
-                      >
-                        <i className={setPlayIcon(playStatus)}></i>
+                         onClick={playAction}>
+                        <i className={setPlayIcon(playStatus)} />
                       </a>
                       {/*Volume control*/}
                       <div id="qtVolumeControl"
@@ -75,28 +76,30 @@ const QTPlayer = ({
                           onChange={volumeAction}
                           className="slider"
                         />
+                        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                         <a className="qw-playerbutton maincolor z-depth-2 tooltipped"
                            data-position="top"
                            data-tooltip="Volume"
                            id="theVolCursor"
                            style={setVolume(volume)}
                         >
-                          <i className="mdi-av-volume-up"></i>
+                          <i className="mdi-av-volume-up" />
                         </a>
                       </div>
                       {/*  END Volume control  */}
                       {/*Play List*/}
+                      {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                       <a className="accentcolor qw-playerbutton qw-channellist tooltipped waves-effect waves-light"
                          data-position="top" onClick={() => playListShowAction()}
                          data-tooltip="Other channels">
-                        <i className="mdi-action-view-list"></i>
+                        <i className="mdi-action-view-list" />
                       </a>
                       <div className={setPlayListStatus(playListShowStatus)} id="channelsList">
                         {
                           songs.map((song, index) => {
                             return (
-                              <a
-                                onClick={() => onSongSelected(song)}
+                              // eslint-disable-next-line jsx-a11y/anchor-is-valid
+                              <a onClick={() => onSongSelected(song)}
                                 className="waves-effect waves-light btn accentcolor qwPlayerPlayList"
                                 key={index}>
                                 <i className={playListItemIcon(selectedSong, song, playStatus)}/>
@@ -111,10 +114,11 @@ const QTPlayer = ({
                   </div>
                 </div>
               </div>
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <a data-activates="nav-mobile" className="button-collapse">
-                <i className="mdi-navigation-menu white-text"></i>
+                <i className="mdi-navigation-menu white-text" />
               </a>
-              <div className="canc"></div>
+              <div className="canc" />
             </div>
           </div>
         </div>
