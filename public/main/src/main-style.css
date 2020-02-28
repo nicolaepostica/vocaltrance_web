@@ -1041,11 +1041,11 @@
 }
 
 .teal.lighten-1 {
-    background-color: #26a69a !important
+    background-color: #ff5252 !important
 }
 
 .teal-text.text-lighten-1 {
-    color: #26a69a !important
+    color: #ff5252 !important
 }
 
 .teal {
@@ -2850,7 +2850,7 @@ td, th {
 }
 
 .collection .collection-item.active {
-    background-color: #26a69a;
+    background-color: #ff5252;
     color: #eafaf9
 }
 
@@ -2861,7 +2861,7 @@ td, th {
     -o-transition: 0.25s;
     -ms-transition: 0.25s;
     transition: 0.25s;
-    color: #26a69a
+    color: #ff5252
 }
 
 .collection a.collection-item:not(.active):hover {
@@ -2880,7 +2880,7 @@ td, th {
 
 .secondary-content {
     float: right;
-    color: #26a69a
+    color: #ff5252
 }
 
 span.badge {
@@ -2901,7 +2901,7 @@ span.badge.new {
     font-weight: 300;
     font-size: 0.8rem;
     color: #fff;
-    background-color: #26a69a;
+    background-color: #ff5252;
     border-radius: 2px
 }
 
@@ -2945,7 +2945,7 @@ span.badge.new:after {
     background-color: inherit;
     top: 0;
     bottom: 0;
-    background-color: #26a69a;
+    background-color: #ff5252;
     -webkit-transition: width .3s linear;
     -moz-transition: width .3s linear;
     -o-transition: width .3s linear;
@@ -2954,7 +2954,7 @@ span.badge.new:after {
 }
 
 .progress .indeterminate {
-    background-color: #26a69a
+    background-color: #ff5252
 }
 
 .progress .indeterminate:before {
@@ -3137,7 +3137,7 @@ span.badge.new:after {
 
 @font-face {
     font-family: "Material-Design-Icons";
-    src: url("font/material-design-icons/Material-Design-Icons.eot?#iefix") format("embedded-opentype"), url("font/material-design-icons/Material-Design-Icons.woff2") format("woff2"), url("font/material-design-icons/Material-Design-Icons.woff") format("woff"), url("font/material-design-icons/Material-Design-Icons.ttf") format("truetype"), url("font/material-design-icons/Material-Design-Icons.svg#Material-Design-Icons") format("svg");
+    src: url("font/material-design-icons/Material-Design-Icons.eot") format("embedded-opentype"), url("font/material-design-icons/Material-Design-Icons.woff2") format("woff2"), url("font/material-design-icons/Material-Design-Icons.woff") format("woff"), url("font/material-design-icons/Material-Design-Icons.ttf") format("truetype"), url("font/material-design-icons/Material-Design-Icons.svg") format("svg");
     font-weight: normal;
     font-style: normal;
 }
@@ -7412,7 +7412,7 @@ small {
 .btn, .btn-large {
     text-decoration: none;
     color: #FFF;
-    background-color: #26a69a;
+    background-color: #ff5252;
     text-align: center;
     letter-spacing: .5px;
     -webkit-transition: .2s ease-out;
@@ -7437,7 +7437,7 @@ small {
     height: 37px;
     line-height: 37px;
     padding: 0;
-    background-color: #26a69a;
+    background-color: #ff5252;
     border-radius: 50%;
     transition: .3s;
     cursor: pointer;
@@ -7546,7 +7546,7 @@ button.btn-floating {
 
 .dropdown-content li > a, .dropdown-content li > span {
     font-size: 1.2rem;
-    color: #26a69a;
+    color: #ff5252;
     display: block;
     padding: 1rem 1rem
 }
@@ -7913,10 +7913,7 @@ select:focus {
     outline: 1px solid #c9f3ef
 }
 
-button:focus {
-    outline: none;
-    background-color: #2ab7a9
-}
+
 
 label {
     font-size: 0.8rem;
@@ -7967,12 +7964,12 @@ input[type=text]:disabled + label, input[type=text][readonly="readonly"] + label
 }
 
 input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
-    border-bottom: 1px solid #26a69a;
-    box-shadow: 0 1px 0 0 #26a69a
+    border-bottom: 1px solid #ff5252;
+    box-shadow: 0 1px 0 0 #ff5252
 }
 
 input[type=text]:focus:not([readonly]) + label, input[type=password]:focus:not([readonly]) + label, input[type=email]:focus:not([readonly]) + label, input[type=url]:focus:not([readonly]) + label, input[type=time]:focus:not([readonly]) + label, input[type=date]:focus:not([readonly]) + label, input[type=datetime-local]:focus:not([readonly]) + label, input[type=tel]:focus:not([readonly]) + label, input[type=number]:focus:not([readonly]) + label, input[type=search]:focus:not([readonly]) + label, textarea.materialize-textarea:focus:not([readonly]) + label {
-    color: #26a69a
+    color: #ff5252
 }
 
 input[type=text].valid, input[type=text]:focus.valid, input[type=password].valid, input[type=password]:focus.valid, input[type=email].valid, input[type=email]:focus.valid, input[type=url].valid, input[type=url]:focus.valid, input[type=time].valid, input[type=time]:focus.valid, input[type=date].valid, input[type=date]:focus.valid, input[type=datetime-local].valid, input[type=datetime-local]:focus.valid, input[type=tel].valid, input[type=tel]:focus.valid, input[type=number].valid, input[type=number]:focus.valid, input[type=search].valid, input[type=search]:focus.valid, textarea.materialize-textarea.valid, textarea.materialize-textarea:focus.valid {
@@ -8025,7 +8022,7 @@ input[type=text].invalid, input[type=text]:focus.invalid, input[type=password].i
 }
 
 .input-field .prefix.active {
-    color: #26a69a
+    color: #ff5252
 }
 
 .input-field .prefix ~ input, .input-field .prefix ~ textarea {
@@ -8045,7 +8042,7 @@ input[type=text].invalid, input[type=text]:focus.invalid, input[type=password].i
 @media only screen and (max-width: 992px) {
     .input-field .prefix ~ input {
         width: 86%;
-        width: calc(100% - 3rem)
+        width: calc(100% - 3rem);
     }
 }
 
@@ -8173,8 +8170,8 @@ textarea.materialize-textarea {
 
 [type="radio"]:checked + label:after {
     border-radius: 50%;
-    border: 2px solid #26a69a;
-    background-color: #26a69a;
+    border: 2px solid #ff5252;
+    background-color: #ff5252;
     z-index: 0;
     -webkit-transform: scale(1.02);
     -moz-transform: scale(1.02);
@@ -8185,13 +8182,13 @@ textarea.materialize-textarea {
 
 [type="radio"].with-gap:checked + label:before {
     border-radius: 50%;
-    border: 2px solid #26a69a
+    border: 2px solid #ff5252
 }
 
 [type="radio"].with-gap:checked + label:after {
     border-radius: 50%;
-    border: 2px solid #26a69a;
-    background-color: #26a69a;
+    border: 2px solid #ff5252;
+    background-color: #ff5252;
     z-index: 0;
     -webkit-transform: scale(.5);
     -moz-transform: scale(.5);
@@ -8274,8 +8271,8 @@ form p:last-child {
     height: 22px;
     border-top: 2px solid transparent;
     border-left: 2px solid transparent;
-    border-right: 2px solid #26a69a;
-    border-bottom: 2px solid #26a69a;
+    border-right: 2px solid #ff5252;
+    border-bottom: 2px solid #ff5252;
     -webkit-transform: rotate(40deg);
     -moz-transform: rotate(40deg);
     -ms-transform: rotate(40deg);
@@ -8301,7 +8298,7 @@ form p:last-child {
     height: 22px;
     border-top: none;
     border-left: none;
-    border-right: 2px solid #26a69a;
+    border-right: 2px solid #ff5252;
     border-bottom: none;
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
@@ -8373,8 +8370,8 @@ form p:last-child {
     top: 0px;
     width: 20px;
     height: 20px;
-    border: 2px solid #26a69a;
-    background-color: #26a69a;
+    border: 2px solid #ff5252;
+    background-color: #ff5252;
     z-index: 0
 }
 
@@ -8419,7 +8416,7 @@ form p:last-child {
 }
 
 .switch label input[type=checkbox]:checked + .lever:after {
-    background-color: #26a69a
+    background-color: #ff5252
 }
 
 .switch label .lever {
@@ -8602,7 +8599,7 @@ select:disabled {
 /*    height: 0;*/
 /*    width: 0;*/
 /*    border-radius: 50%;*/
-/*    background-color: #26a69a;*/
+/*    background-color: #ff5252;*/
 /*    top: 10px;*/
 /*    margin-left: -6px;*/
 /*    -webkit-transform-origin: 50% 50%;*/
@@ -8621,7 +8618,7 @@ select:disabled {
 /*    display: block;*/
 /*    width: 30px;*/
 /*    text-align: center;*/
-/*    color: #26a69a;*/
+/*    color: #ff5252;*/
 /*    font-size: 0;*/
 /*    -webkit-transform: rotate(45deg);*/
 /*    -moz-transform: rotate(45deg);*/
@@ -8661,7 +8658,7 @@ select:disabled {
 /*    height: 14px;*/
 /*    width: 14px;*/
 /*    border-radius: 50%;*/
-/*    background-color: #26a69a;*/
+/*    background-color: #ff5252;*/
 /*    transform-origin: 50% 50%;*/
 /*    margin: -5px 0 0 0;*/
 /*    -webkit-transition: 0.3s;*/
@@ -8690,7 +8687,7 @@ select:disabled {
 /*    height: 14px;*/
 /*    width: 14px;*/
 /*    border-radius: 50%;*/
-/*    background: #26a69a;*/
+/*    background: #ff5252;*/
 /*    margin-top: -5px*/
 /*}*/
 
@@ -8724,7 +8721,7 @@ select:disabled {
 /*    height: 14px;*/
 /*    width: 14px;*/
 /*    border-radius: 50%;*/
-/*    background: #26a69a*/
+/*    background: #ff5252*/
 /*}*/
 
 /*input[type=range]:focus::-ms-fill-lower {*/
@@ -9777,7 +9774,7 @@ select {
 
 .picker__date-display {
     text-align: center;
-    background-color: #26a69a;
+    background-color: #ff5252;
     color: #fff;
     padding-bottom: 15px;
     font-weight: 300
@@ -9839,7 +9836,7 @@ select {
 }
 
 .picker__day.picker__day--today {
-    color: #26a69a
+    color: #ff5252
 }
 
 .picker__day.picker__day--today.picker__day--selected {
@@ -9857,7 +9854,7 @@ select {
     -ms-transform: scale(.9);
     -o-transform: scale(.9);
     transform: scale(.9);
-    background-color: #26a69a;
+    background-color: #ff5252;
     color: #ffffff
 }
 
@@ -9873,7 +9870,7 @@ select {
 .picker__close, .picker__today {
     font-size: 1.1rem;
     padding: 0 1rem;
-    color: #26a69a
+    color: #ff5252
 }
 
 .picker__nav--prev:before, .picker__nav--next:before {
@@ -10609,7 +10606,7 @@ p {
 }
 
 .button-collapse {
-    color: #26a69a;
+    color: #ff5252;
 }
 
 .parallax-container {
@@ -12908,7 +12905,7 @@ body footer.page-footer .footer-copyright .qw-padded {
 
 /* QT_main_color_darker */
 .accentcolor {
-    background-color: #26a69a !important;
+    background-color: #ff5252 !important;
 }
 
 /* QT_accent_color */
@@ -12996,7 +12993,7 @@ a:hover {
 
 /* QT_main_color_darker */
 a {
-    color: #26a69a !important;
+    color: #ff5252 !important;
 }
 
 /* QT_accent_color */
@@ -13055,7 +13052,7 @@ a.maincolor-text:hover {
 
 /* QT_accent_color_link_hover */
 .accentcolor-text, a.accentcolor-text {
-    color: #26a69a !important;
+    color: #ff5252 !important;
 }
 
 /* QT_accent_color */
