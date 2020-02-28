@@ -1,7 +1,7 @@
 import React from 'react';
 import NavBar from "../navbar/NavBar";
 import QTPlayer from "../player/QT-Player";
-import songs from "../resources/songs-data";
+import songs from "../../resources/songs-data";
 import {Link} from "react-router-dom";
 
 const Header = (props) => {
@@ -20,7 +20,7 @@ const Header = (props) => {
       />
       <div className="qw-header-logo-big">
         <Link to="/">
-          <img src={require('../resources/ON-AIR-LOGO-NEGATIVE-m2-1.png')} className="img-responsive"
+          <img src={require('../../resources/ON-AIR-LOGO-NEGATIVE-m2-1.png')} className="img-responsive"
                alt="Home"/>
         </Link>
       </div>

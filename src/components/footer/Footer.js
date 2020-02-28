@@ -1,10 +1,10 @@
 import React, {Component} from "react";
 import "./footer-style.css"
 
-const Footer = ({ref}) => {
+const Footer = () => {
   return (
     <footer className="page-footer maincolor dark qw-parallax-background-css qw-insetshadow qw-fancyborder top"
-            id="qwPageFooter" data-speed="4" data-type="background">
+            id="qwPageFooter" data-speed="4" datatype="background">
       <div className="container qw-footer-widgets maincolor z-depth-4">
         <div className="qw-padded">
           <div className="row">
@@ -22,7 +22,7 @@ const Footer = ({ref}) => {
         <div className="qw-padded">
           <div className="row">
             <div className="col l4 s12">
-              <h4></h4>
+              <h4>Best Trance Radio</h4>
             </div>
             <div className="col l8 s12 qw-playericons">
               {/*<a href="https://drive.google.com/file/d/12bLZLesh0y47kIPpfungRXr8w07i63Ps/view?usp=sharing"*/}
@@ -46,7 +46,8 @@ const Footer = ({ref}) => {
               </div>
               <div className="col l4 s12">
                 <div className="qw-footersocial">
-                  <a href="https://www.facebook.com/vocaltrancemoldova/" className="qw_social" target="_blank">
+                  <a href="https://www.facebook.com/vocaltrancemoldova/" className="qw_social"
+                     target="_blank" rel="noopener noreferrer">
                     <span className="qticon-facebook"/>
                   </a>
                 </div>
@@ -60,8 +61,8 @@ const Footer = ({ref}) => {
 };
 
 class ScrollButton extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       intervalId: 0
     };
@@ -82,9 +83,10 @@ class ScrollButton extends Component {
   render () {
     return (
       <p className="text-center qw-scrollbutton-top">
+        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
         <a className="btn-floating btn-large waves-effect waves-light accentcolor smoothscroll icon-l tooltipped z-depth-2"
            data-position="top" onClick={ () => {this.scrollToTop()}} data-tooltip="Top">
-          <i className="mdi-hardware-keyboard-arrow-up icon-l"></i>
+          <i className="mdi-hardware-keyboard-arrow-up icon-l" />
         </a>
       </p>
     )
