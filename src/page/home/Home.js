@@ -1,10 +1,8 @@
 import React from 'react';
-import channel_info_static from "../../resources/channel-info-static";
-import "./home-styles.css"
-import Spinner from "../../spinner/Spinner";
+import "./home-styles.css";
+import SidebarRight from './SidebarLeft';
 
 const Home = (props) => {
-  const {data, loading} = props;
   return (
     <section id="page-3268"
              className="qw-mainsection qw-page-section qw-top30 post-3268 page type-page status-publish hentry">
@@ -69,25 +67,7 @@ const Home = (props) => {
             </main>
           </div>
           {/*========== Sidebar right col =========*/}
-          <div className="col m12 l4  qw-sidebar-right" id="qwSidebarContainer">
-            {data.map((item, index) => (
-              <aside key={`icecast-widget-${index}`} className="widget icecaststatus">
-                <h4 className="qw-widget-title">{channel_info_static[item.key].block_name}</h4>
-                <div className="paper z-depth-1">
-                  <div className="content">
-                    {loading ? <Spinner/> : item.channel_info.map((channel, c_index) => (
-                      <div key={`${item.key}-${channel.bitrate}`}>
-                        <strong>{`${channel_info_static[item.key].channel_name} ${channel.bitrate}`}</strong><br/>
-                        <a
-                          href={`${channel_info_static[item.key].url}${channel.bitrate}.m3u`}>{item.track_title}</a>
-                        <br/>Listeners Connected:<a className="listener no-hover">{channel.listener}</a><br/>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </aside>
-            ))}
-          </div>
+          <SidebarRight {...props}/>
         </div>
       </div>
     </section>
