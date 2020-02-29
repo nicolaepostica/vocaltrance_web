@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import Header from "../header/Header";
 import Home from "../../page/home/Home";
 import Blog from "../../page/blog/Blog";
-import Team from "../../page/team/Team";
 import Video from "../../page/video/Video";
 import Contacts from "../../page/contacts/Contacts";
 import './root-styles.css';
@@ -36,8 +35,8 @@ export default class RootContainer extends Component {
       position: 0,
       volume: 70,
       playbackRate: 1,
-      // playStatus: Sound.status.PLAYING,
-      playStatus: Sound.status.PAUSED,
+      playStatus: Sound.status.PLAYING,
+      // playStatus: Sound.status.PAUSED,
       currentTrack: '',
       data: data_template,
       loading_channel_data: true,
@@ -47,8 +46,8 @@ export default class RootContainer extends Component {
   componentDidMount() {
     this.get_channel_info();
     this.get_last_ten();
-    // setInterval(this.get_channel_info, 10000);
-    // setInterval(this.get_last_ten, 10000);
+    setInterval(this.get_channel_info, 10000);
+    setInterval(this.get_last_ten, 10000);
     let stickToBot = document.getElementById("qwMainDivNavbar").offsetTop + 120;
     window.addEventListener("scroll", ()=>this.onScroll(stickToBot));
   }
@@ -151,7 +150,6 @@ export default class RootContainer extends Component {
                   playStatus={this.state.playStatus}/>
 
           <Route path="/blog" component={Blog}/>
-          <Route path="/team" component={Team}/>
           <Route path="/videos" component={Video}/>
           <Route path="/contacts" component={() => <Contacts data={this.state.data} loading={this.state.loading_channel_data}/>}/>
           <Route path="/" component={() => <Home data={this.state.data} loading={this.state.loading_channel_data}/>} exact={true}/>

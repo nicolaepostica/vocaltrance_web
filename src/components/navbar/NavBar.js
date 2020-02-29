@@ -28,14 +28,11 @@ const NavBar = ({lastTenAction, lastTenStatus, clipDialog, clipDialogAction, las
             <li id="menu-item-3000" className="mdi-action-home">
               <Link to="/">Home</Link>
             </li>
-            <li id="menu-item-3001" className="qticon-blogger">
-              <Link to="/blog">VK / FB</Link>
-            </li>
-            <li id="menu-item-3001" className="mdi-action-account-box">
-              <Link to="/team">Team</Link>
-            </li>
             <li id="menu-item-3004" className="qticon-play">
               <Link to="/videos">Videos</Link>
+            </li>
+            <li id="menu-item-3001" className="qticon-blogger">
+              <Link to="/blog">VK / FB</Link>
             </li>
             <li id="menu-item-3005" className="mdi-action-perm-phone-msg">
               <Link to="/contacts">Contacts</Link>
