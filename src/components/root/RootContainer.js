@@ -12,6 +12,7 @@ import axios from "axios";
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import Footer from "../footer/Footer";
 import {BASE_URL} from '../../constants';
+import {createBrowserHistory} from 'history';
 
 const key_to_index = {radio: 0, vocaltrance: 1, deep: 2, positive: 3, uplifting: 4, chillout: 5};
 const key_to_url = {
@@ -21,6 +22,8 @@ const key_to_url = {
   positive: "get_last10_positive_track",
   uplifting: "get_last10_uplifting_track",
   chillout: "get_last10_chillout_track"};
+
+const history = createBrowserHistory();
 
 export default class RootContainer extends Component {
   constructor(props) {
@@ -36,7 +39,6 @@ export default class RootContainer extends Component {
       volume: 70,
       playbackRate: 1,
       playStatus: Sound.status.PLAYING,
-      // playStatus: Sound.status.PAUSED,
       currentTrack: '',
       data: data_template,
       loading_channel_data: true,
@@ -133,7 +135,7 @@ export default class RootContainer extends Component {
     return (
       <>
       <div id="qtMainContainer" className="qw-main-container">
-        <Router>
+        <Router history={history}>
           <Header lastTenStatus={this.state.lastTenStatus}
                   lastTenAction={this.lastTenAction}
                   clipDialog={this.state.clipDialog}
