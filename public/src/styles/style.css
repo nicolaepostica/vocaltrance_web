@@ -118,9 +118,8 @@ Tags: light, two-columns
 .mydialog .dialog {
     width: 275px;
     position: absolute;
-    margin: auto;
     background-color: rgba(51, 51, 51, 0.3) !important;
-    margin-top: 15px;
+    margin: 15px auto auto;
     padding: 2px;
     text-align: center;
     border-radius: 20px;
@@ -192,7 +191,7 @@ Tags: light, two-columns
     width: auto;
     font-size: 14px;
     text-transform: uppercase;
-    padding: 0px 10px;
+    padding: 0 10px;
     font-weight: bold;
 }
 

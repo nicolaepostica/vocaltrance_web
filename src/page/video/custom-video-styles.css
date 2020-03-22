@@ -40,6 +40,10 @@
     cursor: pointer;
 }
 
+.loading {
+    background: transparent url('../../resources/videolove/loader.gif') center no-repeat;
+}
+
 
 
 

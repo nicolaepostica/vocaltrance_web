@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import './video-styles.css'
 import './swipebox.css'
-import './custom-video-stiles.css'
+import './custom-video-styles.css'
 import axios from "axios";
 import Spinner from "../../components/spinner/Spinner";
 import {BASE_URL} from '../../constants';
@@ -147,7 +147,7 @@ class Video extends Component {
                                  onClick={() => this.openPlayer(index)}>
                                 <img src={`${HeadImageUrl}${img}`}
                                      alt={`alt-${id}`}
-                                     className="video-splash-screen"
+                                     className="video-splash-screen loading"
                                      style={{height: "266.063px", width: "473px"}}/>
                                 <span className="detail">
                             <span className="title">{title}</span>

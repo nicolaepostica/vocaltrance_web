@@ -1,6 +1,5 @@
 import React from "react";
 import VK, {Comments as VkComments} from 'react-vk';
-import {FacebookProvider, Comments as FacebookComments} from 'react-facebook';
 
 const handleNewComment = (num, last_comment, date, sign) => {
   console.log(last_comment);
@@ -16,20 +15,22 @@ const Blog = () => {
               <div className="row">
                 <div className="col s12 l6">
                   <h1 className="qw-content-title grey-text">Blog</h1>
-                  <div id="vk_comments" style={{width: '665px', height: '269px', background: 'none'}}>
-                    <VK apiId={'4378299'}>
-                      <VkComments onNewComment={handleNewComment}/>
-                    </VK>
-                  </div>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col s12 l6">
+                  <VK apiId={'7340379'}>
+                    <VkComments onNewComment={handleNewComment}/>
+                  </VK>
                 </div>
                 <div className="col s12 l6">
-                  <div className="fb-comments fb_iframe_widget fb_iframe_widget_fluid_desktop" style={{width: '100%'}}>
-                    <span style={{verticalAlign: 'bottom', width: '100%', height: '921px'}}>
-                      <FacebookProvider appId="123456789">
-                        <FacebookComments href="http://www.facebook.com"/>
-                      </FacebookProvider>
-                    </span>
-                  </div>
+                  <iframe name="f120743bd69491" width="1000px" height="100px" title="fb:comments Facebook Social Plugin"
+                          frameBorder="0" allowTransparency="true" allowFullScreen="true" scrolling="no"
+                          allow="encrypted-media"
+                          src="https://www.facebook.com/v2.8/plugins/comments.php?app_id=&channel=https://staticxx.facebook.com/connect/xd_arbiter.php?version=45%23cb=f33cf8fd2aa501c&domain=vocaltrance.fm&origin=http://vocaltrance.fm/f3f7c6eb30ec0a8&relation=parent.parent&container_width=689&height=100&href=http://vocaltrance.fm/&locale=ru_RU&numposts=10&sdk=joey&version=v2.8"
+                          style={{border: 'none', visibility: 'visible', width: '100%', height: '921px'}}
+                          className="">
+                  </iframe>
                 </div>
               </div>
             </div>

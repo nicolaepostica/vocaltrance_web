@@ -7,7 +7,6 @@ footer .container .qw-padded .row .col.l4.s12.ch1 {
     transform: translateX(-70px) scale(0.95);
     opacity: 0;
     -webkit-transform: translateX(-70px) scale(0.95);
-    opacity: 0;
 }
 
 footer .container .qw-padded .row .col.l4.s12.ch2 {
@@ -15,5 +14,4 @@ footer .container .qw-padded .row .col.l4.s12.ch2 {
     transform: translateX(70px) scale(0.95);
     opacity: 0;
     -webkit-transform: translateX(70px) scale(0.95);
-    opacity: 0;
 }

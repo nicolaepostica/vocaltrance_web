@@ -44,9 +44,8 @@ img.emoji {
 }
 
 .dropDownMenu li li a {
-    background: linear-gradient(to right, #455a64 34%, #ff5252 65%);
     background-size: 300% 100%;
-    background-position: right bottom;
+    background: linear-gradient(to right, #455a64 34%, #ff5252 65%) right bottom;
 }
 
 .accentcolor.dark {
@@ -97,7 +96,10 @@ a.maincolor-text:hover {
     color: #455a64 !important;
 }
 
-.maincolor ::-webkit-input-placeholder, .maincolor :-moz-placeholder, .maincolor ::-moz-placeholder, .maincolor :-ms-input-placeholder {
+.maincolor ::-webkit-input-placeholder,
+.maincolor :-moz-placeholder,
+.maincolor ::-moz-placeholder,
+.maincolor :-ms-input-placeholder {
     color: #ffffff !important;
 }
 
@@ -189,7 +191,7 @@ body, p, .normalfont, .qw-nf {
     font-family: "Lato", sans-serif;
 }
 
-h1, h2, h3, h4, h5, qw-page-title, .tooltip, #nav, h1.qw-page-title, h1.qw-moduletitle {
+h1, h2, h3, h4, h5, .qw-page-title, .tooltip, #nav, h1.qw-page-title, h1.qw-moduletitle {
     font-family: "Montserrat", sans-serif;
 }
 
@@ -206,7 +208,7 @@ h1, h2, h3, h4, h5, qw-page-title, .tooltip, #nav, h1.qw-page-title, h1.qw-modul
     @media only screen and (max-width: 992px) {
         .qw-themusicplayer-dynamicplace {
             position: absolute;
-            top: 0px;
+            top: 0;
             right: 0;
             height: 60px;
             padding-top: 8px;
@@ -300,7 +302,7 @@ h1, h2, h3, h4, h5, qw-page-title, .tooltip, #nav, h1.qw-page-title, h1.qw-modul
 }
 
 .fb_dialog_close_icon {
-    background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;
+    background: url(../img/close.png) no-repeat scroll 0 0 transparent;
     cursor: pointer;
     display: block;
     height: 15px;
@@ -324,11 +326,11 @@ h1, h2, h3, h4, h5, qw-page-title, .tooltip, #nav, h1.qw-page-title, h1.qw-modul
 }
 
 .fb_dialog_close_icon:hover {
-    background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent
+    background: url(../img/close.png) no-repeat scroll 0 -15px transparent
 }
 
 .fb_dialog_close_icon:active {
-    background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent
+    background: url(../img/close.png) no-repeat scroll 0 -30px transparent
 }
 
 .fb_dialog_iframe {
@@ -345,7 +347,7 @@ h1, h2, h3, h4, h5, qw-page-title, .tooltip, #nav, h1.qw-page-title, h1.qw-modul
 }
 
 .fb_dialog_content .dialog_title > span {
-    background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;
+    background: url(../img/facebook.gif) no-repeat 5px 50%;
     float: left;
     padding: 5px 0 7px 26px
 }
@@ -362,7 +364,7 @@ body.fb_hidden {
 }
 
 .fb_dialog.fb_dialog_mobile.loading {
-    background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;
+    background: url(../img/loader.gif) white no-repeat 50% 50%;
     min-height: 100%;
     min-width: 100%;
     overflow: hidden;
@@ -421,7 +423,7 @@ body.fb_hidden {
 }
 
 .fb_dialog_content .dialog_header {
-    background: linear-gradient(from(#738aba), to(#2c4987));
+    background: linear-gradient(#738aba, #2c4987);
     border-bottom: 1px solid;
     border-color: #043b87;
     box-shadow: white 0 1px 1px -1px inset;
@@ -453,7 +455,7 @@ body.fb_hidden {
 }
 
 .fb_dialog_content .touchable_button {
-    background: linear-gradient(from(#4267B2), to(#2a4887));
+    background: linear-gradient(#4267B2, #2a4887);
     background-clip: padding-box;
     border: 1px solid #29487d;
     border-radius: 3px;
@@ -485,7 +487,7 @@ body.fb_hidden {
 }
 
 .fb_dialog_content .dialog_content {
-    background: url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;
+    background: url(../img/loader_v1.gif) no-repeat 50% 50%;
     border: 1px solid #4a4a4a;
     border-bottom: 0;
     border-top: 0;
@@ -514,7 +516,7 @@ body.fb_hidden {
 #fb_dialog_loader_spinner {
     animation: rotateSpinner 1.2s linear infinite;
     background-color: transparent;
-    background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);
+    background-image: url(../img/loader.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     height: 24px;
@@ -545,7 +547,9 @@ body.fb_hidden {
     position: absolute
 }
 
-.fb_iframe_widget_fluid_desktop, .fb_iframe_widget_fluid_desktop span, .fb_iframe_widget_fluid_desktop iframe {
+.fb_iframe_widget_fluid_desktop,
+.fb_iframe_widget_fluid_desktop span,
+.fb_iframe_widget_fluid_desktop iframe {
     max-width: 100%
 }
 
