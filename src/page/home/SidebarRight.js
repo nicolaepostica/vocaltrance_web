@@ -1,8 +1,8 @@
 import React from "react";
 import channel_info_static from "../../resources/channel-info-static";
-import Spinner from "../../components/spinner/Spinner";
+import Spinner from "../../components/spinner";
 
-const SidebarLeft = ({data, loading}) => {
+const SidebarRight = ({data, loading}) => {
   return(
     <div className="col m12 l4  qw-sidebar-right" id="qwSidebarContainer">
       {data.map((item, index) => (
@@ -25,4 +25,4 @@ const SidebarLeft = ({data, loading}) => {
   )
 };
 
-export default SidebarLeft;
+export {SidebarRight};

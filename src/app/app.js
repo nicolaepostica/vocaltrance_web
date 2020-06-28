@@ -1,18 +1,23 @@
 import React, {Component} from "react";
-import Header from "../header/Header";
-import Home from "../../page/home/Home";
-import Blog from "../../page/blog/Blog";
-import Video from "../../page/video/Video";
-import Contacts from "../../page/contacts/Contacts";
-import './root-styles.css';
+import Header from "../components/header";
+import Home from "../page/home";
+import Blog from "../page/blog";
+import Video from "../page/video";
+import Contacts from "../page/contacts";
+import './app-styles.css';
 import Sound from "react-sound";
-import songs from "../../resources/songs-data";
-import data_template from "../../resources/data-template"
+import songs from "../resources/songs-data";
+import data_template from "../resources/data-template"
 import axios from "axios";
 import {BrowserRouter as Router, Route} from 'react-router-dom'
-import Footer from "../footer/Footer";
-import {BASE_URL} from '../../constants';
+import Footer from "../components/footer";
+import {BASE_URL} from '../constants';
 import {createBrowserHistory} from 'history';
+import * as ReactGA from 'react-ga';
+import {YMInitializer} from 'react-yandex-metrika';
+
+// ReactGA.initialize('UA-168940851-1');
+// ReactGA.pageview(window.location.pathname + window.location.search);
 
 const key_to_index = {radio: 0, vocaltrance: 1, deep: 2, positive: 3, uplifting: 4, chillout: 5};
 const key_to_url = {
@@ -21,11 +26,12 @@ const key_to_url = {
   deep: "get_last10_deep_track",
   positive: "get_last10_positive_track",
   uplifting: "get_last10_uplifting_track",
-  chillout: "get_last10_chillout_track"};
+  chillout: "get_last10_chillout_track"
+};
 
 const history = createBrowserHistory();
 
-export default class RootContainer extends Component {
+export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -46,12 +52,18 @@ export default class RootContainer extends Component {
   }
 
   componentDidMount() {
+    this.initializeReactGA();
     this.get_channel_info();
     this.get_last_ten();
     setInterval(this.get_channel_info, 10000);
     setInterval(this.get_last_ten, 10000);
     let stickToBot = document.getElementById("qwMainDivNavbar").offsetTop + 120;
-    window.addEventListener("scroll", ()=>this.onScroll(stickToBot));
+    window.addEventListener("scroll", () => this.onScroll(stickToBot));
+  }
+
+  initializeReactGA() {
+    ReactGA.initialize('UA-168940851-1');
+    ReactGA.pageview('/');
   }
 
   update_current_track = (channel) => {
@@ -134,52 +146,55 @@ export default class RootContainer extends Component {
   render() {
     return (
       <>
-      <div id="qtMainContainer" className="qw-main-container">
-        <Router history={history}>
-          <Header lastTenStatus={this.state.lastTenStatus}
-                  lastTenAction={this.lastTenAction}
-                  clipDialog={this.state.clipDialog}
-                  clipDialogAction={this.clipDialogAction}
-                  lastTenData={this.state.lastTenData}
-                  playAction={this.playAction}
-                  playListShowAction={this.playListShowAction}
-                  playListShowStatus={this.state.playListShowStatus}
+        <div id="qtMainContainer" className="qw-main-container">
+          <YMInitializer accounts={[64751911]} />
+          <Router history={history}>
+            <Header lastTenStatus={this.state.lastTenStatus}
+                    lastTenAction={this.lastTenAction}
+                    clipDialog={this.state.clipDialog}
+                    clipDialogAction={this.clipDialogAction}
+                    lastTenData={this.state.lastTenData}
+                    playAction={this.playAction}
+                    playListShowAction={this.playListShowAction}
+                    playListShowStatus={this.state.playListShowStatus}
+                    volume={this.state.volume}
+                    volumeAction={this.volumeAction}
+                    selectedSong={this.state.currentSong}
+                    onSongSelected={this.handleSongSelected}
+                    currentTrack={this.state.currentTrack}
+                    playStatus={this.state.playStatus}/>
+
+            <Route path="/blog" component={Blog}/>
+            <Route path="/videos" component={Video}/>
+            <Route path="/contacts"
+                   component={() => <Contacts data={this.state.data} loading={this.state.loading_channel_data}/>}/>
+            <Route path="/" component={() => <Home data={this.state.data} loading={this.state.loading_channel_data}/>}
+                   exact={true}/>
+
+            {this.state.currentSong && (
+              this.state.controlled ? (
+                <Sound
+                  url={this.state.currentSong.url}
+                  playStatus={this.state.playStatus}
                   volume={this.state.volume}
-                  volumeAction={this.volumeAction}
-                  selectedSong={this.state.currentSong}
-                  onSongSelected={this.handleSongSelected}
-                  currentTrack={this.state.currentTrack}
-                  playStatus={this.state.playStatus}/>
-
-          <Route path="/blog" component={Blog}/>
-          <Route path="/videos" component={Video}/>
-          <Route path="/contacts" component={() => <Contacts data={this.state.data} loading={this.state.loading_channel_data}/>}/>
-          <Route path="/" component={() => <Home data={this.state.data} loading={this.state.loading_channel_data}/>} exact={true}/>
-
-          {this.state.currentSong && (
-            this.state.controlled ? (
-              <Sound
-                url={this.state.currentSong.url}
-                playStatus={this.state.playStatus}
-                volume={this.state.volume}
-                playbackRate={this.state.playbackRate}
-                onFinishedPlaying={() => this.setState({playStatus: Sound.status.STOPPED})}
-              />
-            ) : (
-              <Sound
-                url={this.state.currentSong.url}
-                playStatus={this.state.playStatus}
-                volume={this.state.volume}
-                playbackRate={this.state.playbackRate}
-                onFinishedPlaying={() => this.setState({playStatus: Sound.status.STOPPED})}
-              />
-            )
-          )}
-        </Router>
-      </div>
-      <div className = "qw-pushpin-block" />
-      <Footer />
-    </>
+                  playbackRate={this.state.playbackRate}
+                  onFinishedPlaying={() => this.setState({playStatus: Sound.status.STOPPED})}
+                />
+              ) : (
+                <Sound
+                  url={this.state.currentSong.url}
+                  playStatus={this.state.playStatus}
+                  volume={this.state.volume}
+                  playbackRate={this.state.playbackRate}
+                  onFinishedPlaying={() => this.setState({playStatus: Sound.status.STOPPED})}
+                />
+              )
+            )}
+          </Router>
+        </div>
+        <div className="qw-pushpin-block"/>
+        <Footer/>
+      </>
     )
   }
 }

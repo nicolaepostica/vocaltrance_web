@@ -1,6 +1,6 @@
 import React from 'react';
-import NavBar from "../navbar/NavBar";
-import QTPlayer from "../player/QT-Player";
+import NavBar from "../navbar";
+import QTPlayer from "../player";
 import songs from "../../resources/songs-data";
 import {Link} from "react-router-dom";
 

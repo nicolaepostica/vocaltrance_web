@@ -3,7 +3,7 @@ import './video-styles.css'
 import './swipebox.css'
 import './custom-video-styles.css'
 import axios from "axios";
-import Spinner from "../../components/spinner/Spinner";
+import Spinner from "../../components/spinner";
 import {BASE_URL} from '../../constants';
 
 const HeadVideoUrl = 'https://www.youtube.com/embed/';

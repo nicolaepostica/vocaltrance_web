@@ -31,10 +31,7 @@ const playListItemIcon = (currentSong, song, playStatus) => {
   }
 };
 
-const QTPlayer = ({
-                    playAction, playListShowAction, playListShowStatus, volumeAction, playStatus,
-                    volume, currentTrack, songs, onSongSelected, selectedSong
-                  }) => {
+const QTPlayer = ({playAction, playListShowAction, playListShowStatus, volumeAction, playStatus, volume, currentTrack, songs, onSongSelected, selectedSong}) => {
   return (
     <div className="qw-headernav" id="qwMainDivNavbar">
       <nav className="qw-animated " role="navigation" id="qwMainNavbar">
@@ -46,7 +43,7 @@ const QTPlayer = ({
                  data-tooltip="Other channels"
                  onClick={() => playListShowAction()}>
                 <div className="title">Other Channels</div>
-                <i className="mdi-action-view-list" />
+                <i className="mdi-action-view-list"/>
               </a>
 
               <div className="runing-string">
@@ -83,7 +80,7 @@ const QTPlayer = ({
                            id="theVolCursor"
                            style={setVolume(volume)}
                         >
-                          <i className="mdi-av-volume-up" />
+                          <i className="mdi-av-volume-up"/>
                         </a>
                       </div>
                       {/*  END Volume control  */}
@@ -92,7 +89,7 @@ const QTPlayer = ({
                       <a className="accentcolor qw-playerbutton qw-channellist tooltipped waves-effect waves-light"
                          data-position="top" onClick={() => playListShowAction()}
                          data-tooltip="Other channels">
-                        <i className="mdi-action-view-list" />
+                        <i className="mdi-action-view-list"/>
                       </a>
                       <div className={setPlayListStatus(playListShowStatus)} id="channelsList">
                         {
@@ -100,8 +97,8 @@ const QTPlayer = ({
                             return (
                               // eslint-disable-next-line jsx-a11y/anchor-is-valid
                               <a onClick={() => onSongSelected(song)}
-                                className="waves-effect waves-light btn accentcolor qwPlayerPlayList"
-                                key={index}>
+                                 className="waves-effect waves-light btn accentcolor qwPlayerPlayList"
+                                 key={index}>
                                 <i className={playListItemIcon(selectedSong, song, playStatus)}/>
                                 <span>{song.title}</span>
                               </a>
@@ -116,9 +113,9 @@ const QTPlayer = ({
               </div>
               {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <a data-activates="nav-mobile" className="button-collapse">
-                <i className="mdi-navigation-menu white-text" />
+                <i className="mdi-navigation-menu white-text"/>
               </a>
-              <div className="canc" />
+              <div className="canc"/>
             </div>
           </div>
         </div>

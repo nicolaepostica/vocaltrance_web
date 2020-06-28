@@ -1,6 +1,6 @@
 import React from 'react';
 import "./home-styles.css";
-import SidebarRight from './SidebarLeft';
+import {SidebarRight} from "./SidebarRight";
 
 const Home = (props) => {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import SidebarRight from "../home/SidebarLeft";
+import {SidebarRight} from "../home";
 import ContactBody from "./ContactBody";
 
 const Contacts = (props) => {
