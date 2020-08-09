@@ -2,7 +2,7 @@ import React from "react";
 import {SidebarRight} from "../home";
 import ContactBody from "./ContactBody";
 
-const Contacts = (props) => {
+const Contacts = () => {
   return (
     <section id="page-3268"
              className="qw-mainsection qw-page-section qw-top30 post-3268 page type-page status-publish hentry">
@@ -11,7 +11,7 @@ const Contacts = (props) => {
           {/*========== Content col =========*/}
           <ContactBody />
           {/*========== Sidebar right col =========*/}
-          <SidebarRight {...props}/>
+          <SidebarRight />
         </div>
       </div>
     </section>

@@ -9,15 +9,11 @@ import Sound from "react-sound";
 import songs from "../resources/songs-data";
 import data_template from "../resources/data-template"
 import axios from "axios";
-import {BrowserRouter as Router, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Footer from "../components/footer";
 import {BASE_URL} from '../constants';
 import {createBrowserHistory} from 'history';
-import * as ReactGA from 'react-ga';
-import {YMInitializer} from 'react-yandex-metrika';
-
-// ReactGA.initialize('UA-168940851-1');
-// ReactGA.pageview(window.location.pathname + window.location.search);
+import {Provider} from "../components/context";
 
 const key_to_index = {radio: 0, vocaltrance: 1, deep: 2, positive: 3, uplifting: 4, chillout: 5};
 const key_to_url = {
@@ -40,7 +36,7 @@ export default class App extends Component {
       clipDialog: false,
       playListShowStatus: false,
       controlled: true,
-      currentSong: songs[0],
+      selectedSong: songs[0],
       position: 0,
       volume: 70,
       playbackRate: 1,
@@ -50,9 +46,8 @@ export default class App extends Component {
       loading_channel_data: true,
     };
   }
-
+  
   componentDidMount() {
-    this.initializeReactGA();
     this.get_channel_info();
     this.get_last_ten();
     setInterval(this.get_channel_info, 10000);
@@ -60,33 +55,28 @@ export default class App extends Component {
     let stickToBot = document.getElementById("qwMainDivNavbar").offsetTop + 120;
     window.addEventListener("scroll", () => this.onScroll(stickToBot));
   }
-
-  initializeReactGA() {
-    ReactGA.initialize('UA-168940851-1');
-    ReactGA.pageview('/');
-  }
-
+  
   update_current_track = (channel) => {
     this.setState({currentTrack: channel.track_title});
   };
-
+  
   get_channel_info = () => {
     axios.get(`${BASE_URL}get_current_tracks`)
       .then((response) => {
         this.setState({data: response.data, loading_channel_data: false});
-        this.update_current_track(response.data[key_to_index[this.state.currentSong.key]]);
+        this.update_current_track(response.data[key_to_index[this.state.selectedSong.key]]);
       })
-      .catch((error) => console.log("Can’t access " + BASE_URL + " response. Blocked by browser"));
+      .catch(() => console.log("Can’t access " + BASE_URL + " response. Blocked by browser"));
   };
-
+  
   get_last_ten = () => {
-    axios.get(`${BASE_URL}${key_to_url[this.state.currentSong.key]}`)
+    axios.get(`${BASE_URL}${key_to_url[this.state.selectedSong.key]}`)
       .then((response) => {
         this.setState({lastTenData: response.data})
       })
-      .catch((error) => console.log("Can’t access " + BASE_URL + " response. Blocked by browser"));
+      .catch(() => console.log("Can’t access " + BASE_URL + " response. Blocked by browser"));
   };
-
+  
   onScroll = (stickToBot) => {
     let qtBody = document.getElementById("theBody");
     let scrollVal = window.scrollY;
@@ -100,12 +90,12 @@ export default class App extends Component {
       }
     }
   };
-
+  
   lastTenAction = (status) => {
     this.setState({lastTenStatus: status});
     this.setState({playListShowStatus: false});
   };
-
+  
   playAction = () => {
     if (this.state.playStatus === Sound.status.PAUSED) {
       this.setState({playStatus: Sound.status.PLAYING});
@@ -115,12 +105,12 @@ export default class App extends Component {
     this.setState({lastTenStatus: false});
     this.setState({playListShowStatus: false});
   };
-
+  
   clipDialogAction = () => {
     this.setState({clipDialog: true});
     setTimeout(() => this.setState({clipDialog: false}), 2000);
   };
-
+  
   playListShowAction = () => {
     if (this.state.playListShowStatus) {
       this.setState({playListShowStatus: false});
@@ -129,72 +119,63 @@ export default class App extends Component {
     }
     this.setState({lastTenStatus: false});
   };
-
+  
   volumeAction = (e) => {
     this.setState({volume: parseInt(e.target.value)});
     this.setState({lastTenStatus: false});
     this.setState({playListShowStatus: false});
   };
-
+  
   handleSongSelected = async (song) => {
-    await this.setState({currentSong: song,});
+    await this.setState({selectedSong: song,});
     await this.update_current_track(this.state.data[key_to_index[song.key]]);
     await this.get_last_ten();
     await this.playListShowAction();
   };
-
+  
   render() {
     return (
-      <>
+      <Provider value={this.state}>
         <div id="qtMainContainer" className="qw-main-container">
-          <YMInitializer accounts={[64751911]} />
           <Router history={history}>
-            <Header lastTenStatus={this.state.lastTenStatus}
-                    lastTenAction={this.lastTenAction}
-                    clipDialog={this.state.clipDialog}
+            <Header lastTenAction={this.lastTenAction}
                     clipDialogAction={this.clipDialogAction}
-                    lastTenData={this.state.lastTenData}
                     playAction={this.playAction}
                     playListShowAction={this.playListShowAction}
-                    playListShowStatus={this.state.playListShowStatus}
-                    volume={this.state.volume}
                     volumeAction={this.volumeAction}
-                    selectedSong={this.state.currentSong}
-                    onSongSelected={this.handleSongSelected}
-                    currentTrack={this.state.currentTrack}
-                    playStatus={this.state.playStatus}/>
-
-            <Route path="/blog" component={Blog}/>
-            <Route path="/videos" component={Video}/>
-            <Route path="/contacts"
-                   component={() => <Contacts data={this.state.data} loading={this.state.loading_channel_data}/>}/>
-            <Route path="/" component={() => <Home data={this.state.data} loading={this.state.loading_channel_data}/>}
-                   exact={true}/>
-
-            {this.state.currentSong && (
-              this.state.controlled ? (
-                <Sound
-                  url={this.state.currentSong.url}
-                  playStatus={this.state.playStatus}
-                  volume={this.state.volume}
-                  playbackRate={this.state.playbackRate}
-                  onFinishedPlaying={() => this.setState({playStatus: Sound.status.STOPPED})}
-                />
-              ) : (
-                <Sound
-                  url={this.state.currentSong.url}
-                  playStatus={this.state.playStatus}
-                  volume={this.state.volume}
-                  playbackRate={this.state.playbackRate}
-                  onFinishedPlaying={() => this.setState({playStatus: Sound.status.STOPPED})}
-                />
-              )
-            )}
+                    onSongSelected={this.handleSongSelected}/>
+            <Switch>
+              <Route path="/blog" component={Blog}/>
+              <Route path="/videos" component={Video}/>
+              <Route path="/contacts" component={Contacts}/>
+              <Route path="/" component={Home} exact={true}/>
+              <Route render={() => <h2>Page not Found</h2>}/>
+            </Switch>
+            
+            {/*{this.state.selectedSong && (*/}
+            {/*  this.state.controlled ? (*/}
+            {/*    <Sound*/}
+            {/*      url={this.state.selectedSong.url}*/}
+            {/*      playStatus={this.state.playStatus}*/}
+            {/*      volume={this.state.volume}*/}
+            {/*      playbackRate={this.state.playbackRate}*/}
+            {/*      onFinishedPlaying={() => this.setState({playStatus: Sound.status.STOPPED})}*/}
+            {/*    />*/}
+            {/*  ) : (*/}
+            {/*    <Sound*/}
+            {/*      url={this.state.selectedSong.url}*/}
+            {/*      playStatus={this.state.playStatus}*/}
+            {/*      volume={this.state.volume}*/}
+            {/*      playbackRate={this.state.playbackRate}*/}
+            {/*      onFinishedPlaying={() => this.setState({playStatus: Sound.status.STOPPED})}*/}
+            {/*    />*/}
+            {/*  )*/}
+            {/*)}*/}
           </Router>
         </div>
         <div className="qw-pushpin-block"/>
         <Footer/>
-      </>
+      </Provider>
     )
   }
 }

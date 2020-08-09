@@ -62,7 +62,9 @@ class ContactBody extends Component {
             this.setState({done: false});
           }, 2000);
         }
-      )
+      ).catch(()=> {
+        this.setState({processing: false});
+      })
     }
   };
 
