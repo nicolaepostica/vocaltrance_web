@@ -152,25 +152,25 @@ export default class App extends Component {
               <Route render={() => <h2>Page not Found</h2>}/>
             </Switch>
             
-            {/*{this.state.selectedSong && (*/}
-            {/*  this.state.controlled ? (*/}
-            {/*    <Sound*/}
-            {/*      url={this.state.selectedSong.url}*/}
-            {/*      playStatus={this.state.playStatus}*/}
-            {/*      volume={this.state.volume}*/}
-            {/*      playbackRate={this.state.playbackRate}*/}
-            {/*      onFinishedPlaying={() => this.setState({playStatus: Sound.status.STOPPED})}*/}
-            {/*    />*/}
-            {/*  ) : (*/}
-            {/*    <Sound*/}
-            {/*      url={this.state.selectedSong.url}*/}
-            {/*      playStatus={this.state.playStatus}*/}
-            {/*      volume={this.state.volume}*/}
-            {/*      playbackRate={this.state.playbackRate}*/}
-            {/*      onFinishedPlaying={() => this.setState({playStatus: Sound.status.STOPPED})}*/}
-            {/*    />*/}
-            {/*  )*/}
-            {/*)}*/}
+            {this.state.selectedSong && (
+              this.state.controlled ? (
+                <Sound
+                  url={this.state.selectedSong.url}
+                  playStatus={this.state.playStatus}
+                  volume={this.state.volume}
+                  playbackRate={this.state.playbackRate}
+                  onFinishedPlaying={() => this.setState({playStatus: Sound.status.STOPPED})}
+                />
+              ) : (
+                <Sound
+                  url={this.state.selectedSong.url}
+                  playStatus={this.state.playStatus}
+                  volume={this.state.volume}
+                  playbackRate={this.state.playbackRate}
+                  onFinishedPlaying={() => this.setState({playStatus: Sound.status.STOPPED})}
+                />
+              )
+            )}
           </Router>
         </div>
         <div className="qw-pushpin-block"/>
