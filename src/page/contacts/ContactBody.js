@@ -62,7 +62,8 @@ class ContactBody extends Component {
             this.setState({done: false});
           }, 2000);
         }
-      ).catch(()=> {
+      ).catch((error)=> {
+        console.log(error);
         this.setState({processing: false});
       })
     }
