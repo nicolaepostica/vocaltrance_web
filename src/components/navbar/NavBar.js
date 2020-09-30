@@ -25,22 +25,25 @@ const NavBar = ({lastTenAction, lastTenStatus, clipDialog, clipDialogAction, las
       <div className="row">
         <div className="col s8 qw-nooverflow  qw-small qw-caps">
           <ul id="secondarymenu" className="qw-smallmenu qw-nooverflow">
-            <li id="menu-item-3000" className="mdi-action-home">
+            <li id="menu-item-3000" className="mdi mdi-home">
               <Link to="/">Home</Link>
             </li>
-            <li id="menu-item-3004" className="qticon-play">
+            <li id="menu-item-3004" className="mdi mdi-video">
               <Link to="/videos">Videos</Link>
             </li>
-            <li id="menu-item-3001" className="qticon-blogger">
+            <li id="menu-item-3001" className="mdi mdi-blogger">
               <Link to="/blog">VK / FB</Link>
             </li>
-            <li id="menu-item-3005" className="mdi-action-perm-phone-msg">
+            <li id="menu-item-3005" className="mdi mdi-contact-mail-outline">
               <Link to="/contacts">Contacts</Link>
             </li>
-            {/*<li id="menu-item-3006">*/}
-            {/*  <img className="app-android-icon" src={require('../resources/app_android.png')} alt="Android"/>*/}
-            {/*  <a href="https://drive.google.com/file/d/12bLZLesh0y47kIPpfungRXr8w07i63Ps/view?usp=sharing"*/}
-            {/*     target="_blank" rel="noopener noreferrer">Android</a>*/}
+            <li id="menu-item-3006" className="mdi mdi-android">
+              <a className='mobile-app-link' href="https://play.google.com/store/apps/details?id=com.vocaltrancefm"
+                 target="_blank" rel="noopener noreferrer">Android</a>
+            </li>
+            {/*<li id="menu-item-3007" className="mdi mdi-apple">*/}
+            {/*  <a href="https://play.google.com/store/apps/details?id=com.vocaltrancefm"*/}
+            {/*     target="_blank" rel="noopener noreferrer">IOS</a>*/}
             {/*</li>*/}
           </ul>
         </div>

@@ -25,11 +25,11 @@ const Footer = () => {
               <h4>Best Trance Radio</h4>
             </div>
             <div className="col l8 s12 qw-playericons">
-              {/*<a href="https://drive.google.com/file/d/12bLZLesh0y47kIPpfungRXr8w07i63Ps/view?usp=sharing"*/}
-              {/*   target="_blank" rel="noopener noreferrer" id="qwPlayerLinkapp_android"*/}
-              {/*   className="btn-floating z-depth-2 btn-large waves-effect waves-light accentcolor">*/}
-              {/*  <span className="qt-app_android">app_android</span>*/}
-              {/*</a>*/}
+              <a href="https://play.google.com/store/apps/details?id=com.vocaltrancefm"
+                 target="_blank" rel="noopener noreferrer" id="qwPlayerLinkapp_android"
+                 className="btn-floating z-depth-2 btn-large waves-effect waves-light accentcolor">
+                <span className="qt-app_android">app_android</span>
+              </a>
               {/*<a href="/" target="_blank" id="qwPlayerLinkapp_iphone" class="btn-floating z-depth-2 btn-large waves-effect waves-light accentcolor">*/}
               {/*  <span class="qt-app_iphone">app_iphone</span>*/}
               {/*</a>*/}
@@ -48,7 +48,7 @@ const Footer = () => {
                 <div className="qw-footersocial">
                   <a href="https://www.facebook.com/vocaltrancemoldova/" className="qw_social"
                      target="_blank" rel="noopener noreferrer">
-                    <span className="qticon-facebook"/>
+                    <span className="mdi mdi-facebook-box mdi-28px"/>
                   </a>
                 </div>
               </div>
