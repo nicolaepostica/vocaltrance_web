@@ -3127,6 +3127,13 @@ span.badge.new:after {
     padding: 0 !important
 }
 
+@font-face {
+    font-family: "Material-Design-Icons";
+    font-style: normal;
+    src: url("../fonts/material-design-icons3/Material-Design-Icons.eot") format("embedded-opentype"), url("../fonts/material-design-icons3/Material-Design-Icons.woff2") format("woff2"), url("../fonts/material-design-icons3/Material-Design-Icons.woff") format("woff"), url("../fonts/material-design-icons3/Material-Design-Icons.ttf") format("truetype"), url("../fonts/material-design-icons3/Material-Design-Icons.svg") format("svg");
+    font-weight: normal;
+}
+
 [class^="mdi-"]::before, [class*=" mdi-"]::before {
     font-family: "Material-Design-Icons";
     speak: none;
