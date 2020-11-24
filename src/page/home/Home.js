@@ -26,7 +26,7 @@ const Home = () => (
                   <div/>
                 </div>
                 <div>
-                  <h5>POSITIVE HOUSE</h5>
+                  <h5>MELODIC POSITIVE HOUSE</h5>
                   <div>
                     <a href="http://radio.vocaltrance.fm/positive_320.m3u">Positive House 320</a><br/>
                     <a href="http://radio.vocaltrance.fm/positive_256.m3u">Positive House 256</a><br/>
