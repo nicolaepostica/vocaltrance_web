@@ -16,8 +16,8 @@ export default {
   },
   "positive": {
     url: "https://vocaltrance.fm/radio/positive_",
-    channel_name: "Melodic Positive House",
-    block_name: "Melodic Positive House",
+    channel_name: "Melodic Progressive House",
+    block_name: "Melodic Progressive House",
   },
   "uplifting": {
     url: "https://vocaltrance.fm/radio/uplifting_",
