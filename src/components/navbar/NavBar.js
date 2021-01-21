@@ -41,10 +41,10 @@ const NavBar = ({lastTenAction, lastTenStatus, clipDialog, clipDialogAction, las
               <a className='mobile-app-link' href="https://play.google.com/store/apps/details?id=com.vocaltrancefm"
                  target="_blank" rel="noopener noreferrer">Android</a>
             </li>
-            {/*<li id="menu-item-3007" className="mdi mdi-apple">*/}
-            {/*  <a href="https://play.google.com/store/apps/details?id=com.vocaltrancefm"*/}
-            {/*     target="_blank" rel="noopener noreferrer">IOS</a>*/}
-            {/*</li>*/}
+            <li id="menu-item-3007" className="mdi mdi-apple">
+              <a href="https://apps.apple.com/us/app/vocaltrance-fm/id1548487961"
+                 target="_blank" rel="noopener noreferrer">IOS</a>
+            </li>
           </ul>
         </div>
         <div className="col s4 qw-onair-widget">

@@ -23,10 +23,23 @@ const Header = (props) => {
                       lastTenData={lastTenData}
               />
               <div className="qw-header-logo-big">
-                <Link to="/">
-                  <img src={require('../../resources/ON-AIR-LOGO-NEGATIVE-m2-1.png')} className="img-responsive"
-                       alt="Home"/>
-                </Link>
+                <div className="container">
+                  <div className="row">
+                    <a className='mobile-app-link' href="https://play.google.com/store/apps/details?id=com.vocaltrancefm"
+                       target="_blank" rel="noopener noreferrer">
+                      <div className="col m12 l6">
+                        ANDROID
+                      </div>
+                    </a>
+                    <a href="https://apps.apple.com/us/app/vocaltrance-fm/id1548487961"
+                       target="_blank" rel="noopener noreferrer">
+                      <div className="col m12 l6">
+                        IOS
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                
               </div>
               <div className="onair-mobile-cont">
                 <p id="onairMobile" data-clipboard-text={currentTrack}>{currentTrack}</p>
