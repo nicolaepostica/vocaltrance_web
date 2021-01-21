@@ -2,7 +2,6 @@ import React from 'react';
 import NavBar from "../navbar";
 import QTPlayer from "../player";
 import songs from "../../resources/songs-data";
-import {Link} from "react-router-dom";
 import {Consumer} from "../context";
 
 const Header = (props) => {
@@ -39,7 +38,6 @@ const Header = (props) => {
                     </a>
                   </div>
                 </div>
-                
               </div>
               <div className="onair-mobile-cont">
                 <p id="onairMobile" data-clipboard-text={currentTrack}>{currentTrack}</p>
