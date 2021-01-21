@@ -44,19 +44,19 @@ export default [
   {
     key:  "positive",
     url: 'https://vocaltrance.fm/radio/positive_128',
-    title: 'positive house 128',
+    title: 'melodic progressive house 128',
     duration: 0
   },
   {
     key:  "positive",
     url: 'https://vocaltrance.fm/radio/positive_256',
-    title: 'positive house 256',
+    title: 'melodic progressive house 256',
     duration: 0
   },
   {
     key:  "positive",
     url: 'https://vocaltrance.fm/radio/positive_320',
-    title: 'positive house 320',
+    title: 'melodic progressive house 320',
     duration: 0
   },
   {

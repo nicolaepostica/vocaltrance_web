@@ -15,12 +15,12 @@ import {BASE_URL} from '../constants';
 import {createBrowserHistory} from 'history';
 import {Provider} from "../components/context";
 
-const key_to_index = {radio: 0, vocaltrance: 1, deep: 2, positive: 3, uplifting: 4, chillout: 5};
+const key_to_index = {radio: 0, vocaltrance: 1, deep: 2, melodic: 3, uplifting: 4, chillout: 5};
 const key_to_url = {
   radio: "get_last10_vocaltrance_track",
   vocaltrance: "get_last10_vocaltrance_track",
   deep: "get_last10_deep_track",
-  positive: "get_last10_positive_track",
+  melodic: "get_last10_melodic_track",
   uplifting: "get_last10_uplifting_track",
   chillout: "get_last10_chillout_track"
 };
