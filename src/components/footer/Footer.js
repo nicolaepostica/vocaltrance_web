@@ -30,7 +30,9 @@ const Footer = () => {
                  className="btn-floating z-depth-2 btn-large waves-effect waves-light accentcolor">
                 <span className="qt-app_android">app_android</span>
               </a>
-              <a href="https://apps.apple.com/us/app/vocaltrance-fm/id1548487961" target="_blank" id="qwPlayerLinkapp_iphone" className="btn-floating z-depth-2 btn-large waves-effect waves-light accentcolor">
+              <a href="https://apps.apple.com/us/app/vocaltrance-fm/id1548487961"
+                 target="_blank" rel="noopener noreferrer"  id="qwPlayerLinkapp_iphone"
+                 className="btn-floating z-depth-2 btn-large waves-effect waves-light accentcolor">
                 <span className="qt-app_iphone">app_iphone</span>
               </a>
             </div>
